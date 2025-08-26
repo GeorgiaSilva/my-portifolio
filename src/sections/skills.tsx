@@ -4,7 +4,7 @@ import figma from '../assets/figma.svg'
 import react from "../assets/react.svg"
 import wordpress from "../assets/wordpress.svg"
 export const Habilidade = () => {
-
+//teeste
   return (
     <Box sx={{
       paddingTop: '100px',
