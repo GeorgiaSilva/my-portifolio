@@ -1,4 +1,3 @@
-
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import { Box } from '@mui/material';
 export const MenuIcon = () => {
