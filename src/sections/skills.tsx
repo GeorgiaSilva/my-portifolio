@@ -1,5 +1,4 @@
 import { Box, Container, Grid, Typography } from '@mui/material'
-import React from 'react'
 import figma from '../assets/figma.svg'
 import react from "../assets/react.svg"
 import wordpress from "../assets/wordpress.svg"
@@ -33,7 +32,7 @@ export const Habilidade = () => {
 
         <Grid container spacing={4} >
           {[figma, react, wordpress].map((skill, index) => (
-          <Grid size={3} sx={{
+          <Grid key={index} size={3} sx={{
             backgroundColor: '#ffffff13',
             borderRadius: '24px',
             padding: '50px',
