@@ -1,29 +1,29 @@
 import { Box, Container, Typography } from '@mui/material'
-import { MenuItem } from '../components/menuItem'
+// import { MenuItem } from '../components/menuItem'
 import { MenuIcon } from '../components/menuIcon';
 
 export const Header = () => {
     return (
         <Box>
-            <Container sx={{
+            {/* <Container sx={{
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 gap: 2,
                 paddingTop: '20px',
                 paddingBottom: '20px',
-            }}>
-                <MenuItem label="Início" />
+            }}> */}
+                {/* <MenuItem label="Início" />
                 <MenuItem label="Projetos" />
-                <MenuItem label="Habilidades" />
-            </Container>
+                <MenuItem label="Habilidades" /> */}
+            {/* </Container> */}
             <Container sx={{
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 gap: 4,
-                paddingTop: '100px',
-                paddingBottom: '100px',
+                paddingTop: '160px',
+                paddingBottom: '160px',
             
             }}>
                 <Box sx={{
@@ -49,7 +49,7 @@ export const Header = () => {
                     <Typography variant="body1" component="p" sx={{
                         color: '#aaa',
                         }}>
-                            Olá! Eu sou a Geórgia, uma desenvolvedora frontend e designer UX apaixonada por criar experiências digitais 
+                            Olá! Eu sou a Geórgia, uma desenvolvedora frontend e designer UX apaixonada por criar experiências digitais. 
                     </Typography>
                 <Box
                 sx={{
@@ -74,7 +74,7 @@ export const Header = () => {
                 }}>
                     <Box sx={{
                         borderRadius: '40px',
-                        border: '3px solid #fff',
+                        // border: '3px solid #fff',
                         width: '100%',
                         height: '100%',
                     }}>

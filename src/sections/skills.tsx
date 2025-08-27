@@ -2,6 +2,7 @@ import { Box, Container, Grid, Typography } from '@mui/material'
 import figma from '../assets/figma.svg'
 import react from "../assets/react.svg"
 import wordpress from "../assets/wordpress.svg"
+import android from "../assets/android.svg"
 export const Habilidade = () => {
 //teeste
   return (
@@ -31,7 +32,7 @@ export const Habilidade = () => {
       <Container> 
 
         <Grid container spacing={4} >
-          {[figma, react, wordpress].map((skill, index) => (
+          {[figma, react, wordpress, android].map((skill, index) => (
           <Grid key={index} size={3} sx={{
             backgroundColor: '#ffffff13',
             borderRadius: '24px',
@@ -50,7 +51,7 @@ export const Habilidade = () => {
               textAlign: 'center',
               fontWeight: 'Bold',
             }}>
-              Figma
+              {skill === figma ? 'Figma' : skill === react ? 'React' : skill === wordpress ? 'WordPress' : 'Android'}
             </Typography>
           </Grid>
         ))}

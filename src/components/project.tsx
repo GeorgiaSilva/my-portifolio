@@ -10,13 +10,13 @@ export const Project: React.FC<ProjectProps> = ({ color }  ) => {
         alignItems: 'center',
         display: 'flex',
         flexDirection: 'column',
-
-        width: '100vw',
+        borderRadius: '16px',
+        minHeight: '400px',
         backgroundColor: color,
     }}>
         <Container
         sx={{
-           
+        
         }}
         >
             <h3>Projeto 1</h3>

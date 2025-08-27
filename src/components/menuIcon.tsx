@@ -28,18 +28,7 @@ export const MenuIcon = () => {
             padding: 1,
             borderRadius: '20%',
         }} />
-        <EmailOutlinedIcon sx={{
-            border: '2px solid #aaa',
-            color: '#aaa',
-            padding: 1,
-            borderRadius: '20%',
-        }} />
-        <EmailOutlinedIcon sx={{
-            border: '2px solid #aaa',
-            color: '#aaa',
-            padding: 1,
-            borderRadius: '20%',
-        }} />
+
       
     </Box>
   )
