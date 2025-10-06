@@ -1,6 +1,6 @@
 import { Box, Container, Typography } from '@mui/material'
 // import { MenuItem } from '../components/menuItem'
-import { MenuIcon } from '../components/menuIcon';
+// import { MenuIcon } from '../components/menuIcon';
 
 export const Header = () => {
     return (
