@@ -60,7 +60,7 @@ export const Header = () => {
                     height: '100%',
                 }}
                 >
-                    <MenuIcon />
+                    {/* <MenuIcon /> */}
                 </Box>
                 </Box>
                 <Box sx={{
@@ -78,7 +78,7 @@ export const Header = () => {
                         width: '100%',
                         height: '100%',
                     }}>
-                    
+
                     </Box>
 
                 </Box>

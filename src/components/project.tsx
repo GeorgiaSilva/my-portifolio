@@ -1,28 +1,41 @@
-import { Box, Container } from '@mui/material'
+import { Box, Container, Grid } from '@mui/material'
+import FigmaButton from './figmaButton'
+
 
 interface ProjectProps {
-  color: string
+
+  data: {
+    color: string
+    title: string
+    description: string
+    img: string
+  }
 }
 
-export const Project: React.FC<ProjectProps> = ({ color }  ) => {
+
+export const Project: React.FC<ProjectProps> = ({ data }) => {
   return (
     <Box sx={{
-        alignItems: 'center',
-        display: 'flex',
-        flexDirection: 'column',
-        borderRadius: '16px',
-        minHeight: '400px',
-        backgroundColor: color,
-    }}>
-        <Container
-        sx={{
-        
-        }}
-        >
-            <h3>Projeto 1</h3>
-            <p>Descrição do projeto 1</p>
 
-        </Container>
+        alignItems: 'center',
+        width: '100vw',
+        paddingBlock: '100px',
+        backgroundColor: data.color || '#060709',
+    }}>
+      <Container>
+      <Grid container direction="row" spacing={4} >
+        <Grid size={7} >
+  
+            <img style={{ maxWidth: '100%', height: 'auto' }} src={data.img} alt={data.title} />
+        
+        </Grid>
+        <Grid size={5} >
+          <h3>{data.title}</h3>
+          <p>{data.description}</p>
+          <FigmaButton />
+        </Grid>
+      </Grid>
+      </Container>
     </Box>
   )
 }

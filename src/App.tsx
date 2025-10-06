@@ -2,6 +2,7 @@ import { Box } from "@mui/material"
 import { Projects } from "./sections/projects"
 import { Header } from "./sections/header"
 import { Habilidade } from "./sections/skills"
+import Footer from "./sections/footer"
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
     <Header />
     <Habilidade />
     <Projects />
+    <Footer />
     </Box>
   )
 }
