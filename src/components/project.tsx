@@ -1,6 +1,6 @@
 import { Box, Container, Grid } from '@mui/material'
 import FigmaButton from './figmaButton'
-
+import kifome from '../assets/kifome.png'
 
 interface ProjectProps {
 
@@ -25,9 +25,9 @@ export const Project: React.FC<ProjectProps> = ({ data }) => {
       <Container>
       <Grid container direction="row" spacing={4} >
         <Grid size={7} >
-  
-            <img style={{ maxWidth: '100%', height: 'auto' }} src={data.img} alt={data.title} />
-        
+
+            <img style={{ maxWidth: '100%', height: 'auto' }} src={kifome} alt={data.title} />
+
         </Grid>
         <Grid size={5} >
           <h3>{data.title}</h3>

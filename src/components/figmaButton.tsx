@@ -1,5 +1,5 @@
 import { Button } from '@mui/material'
-
+import figmaLogo from '../assets/figma.svg';
 const figmaButton = () => {
   return (
 
@@ -12,7 +12,7 @@ const figmaButton = () => {
         '&:hover': { borderColor: '#fff', backgroundColor: '#ffffff1a' },
         borderRadius: '8px',
       }}>
-        <img style={{ width: '24px', height: '24px', marginRight: '6px', color: 'inherit' }} src="src/assets/figma.svg"  alt="Figma" />
+        <img style={{ width: '24px', height: '24px', marginRight: '6px', color: 'inherit' }} src={figmaLogo}  alt="Figma" />
         Protótipo
       </Button>
 
