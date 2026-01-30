@@ -12,6 +12,7 @@ export const Header = () => {
             <Container
                 maxWidth="md"
                 sx={{
+      
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
@@ -23,9 +24,10 @@ export const Header = () => {
             >
                 <Box
                     sx={{
+                    
                         display: 'flex',
                         flexDirection: 'column',
-                        alignItems: isSmallScreen ? 'center' : 'flex-start',
+                        alignItems: isSmallScreen ? 'center' : '',
                         justifyContent: 'center',
                         gap: 2,
                         width: { xs: '100%', md: '50%' },
@@ -47,12 +49,11 @@ export const Header = () => {
                         variant={isMobile ? 'h3' : 'h2'}
                         component="h1"
                         sx={{
+                           
                             fontWeight: 700,
-                            background: 'linear-gradient(135deg, #C4B5FD 0%, #A855F7 50%, #DDD6FE 100%)',
-                            WebkitBackgroundClip: 'text',
-                            WebkitTextFillColor: 'transparent',
-                            backgroundClip: 'text',
-                            lineHeight: 1.2,
+                            color: 'primary.main',
+                            paddingBottom: 1,
+                           
                         }}
                     >
                         Geórgia Carin
@@ -62,8 +63,8 @@ export const Header = () => {
                         component="p"
                         sx={{
                             color: 'text.secondary',
-                            maxWidth: '600px',
                             lineHeight: 1.6,
+                           
                         }}
                     >
                         Desenvolvedora Frontend e Designer UX apaixonada por criar experiências digitais únicas e intuitivas.
@@ -89,7 +90,7 @@ export const Header = () => {
                                 width: '100%',
                                 height: 'auto',
                                 borderRadius: '16px',
-                                border: '3px solid',
+                                border: '2px solid',
                                 borderColor: 'primary.main',
                                 boxShadow: '0 10px 30px rgba(124, 58, 237, 0.25)',
                                 transition: 'transform 0.3s ease, box-shadow 0.3s ease',
