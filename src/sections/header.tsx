@@ -1,87 +1,106 @@
-import { Box, Container, Typography } from '@mui/material'
-// import { MenuItem } from '../components/menuItem'
-// import { MenuIcon } from '../components/menuIcon';
+import { Box, Container, Typography, useTheme as useMuiTheme, useMediaQuery } from '@mui/material'
+import { SocialLinks } from '../components/socialLinks'
+import perfil from '../assets/foto-perfil.jpeg'
 
 export const Header = () => {
+    const theme = useMuiTheme()
+    const isMobile = useMediaQuery(theme.breakpoints.down('md'))
+    const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'))
+
     return (
-        <Box>
-            {/* <Container sx={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: 2,
-                paddingTop: '20px',
-                paddingBottom: '20px',
-            }}> */}
-                {/* <MenuItem label="Início" />
-                <MenuItem label="Projetos" />
-                <MenuItem label="Habilidades" /> */}
-            {/* </Container> */}
-            <Container sx={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: 4,
-                paddingTop: '160px',
-                paddingBottom: '160px',
-            
-            }}>
-                <Box sx={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'flex-start',
-                    justifyContent: 'center',
-                    gap: 1,
-                    width: '50%',
-                }}>
-                    <Typography variant="h6" component="h2">
-                        Eu sou a Geórgia
-                    </Typography>
-                    <Typography variant="h2" component="h1" sx={{ 
-                        fontWeight: 'bold',
-                        background: 'linear-gradient(135deg, #8e2de2 10%, #9d89c4ff 100%)',
-                        WebkitBackgroundClip: 'text',
-                        WebkitTextFillColor: 'transparent',
-                     }}>
-                        Desenvolvedora
-                        Frontend e designer UX.
-                    </Typography>
-                    <Typography variant="body1" component="p" sx={{
-                        color: '#aaa',
-                        }}>
-                            Olá! Eu sou a Geórgia, uma desenvolvedora frontend e designer UX apaixonada por criar experiências digitais. 
-                    </Typography>
-                <Box
+        <Box id="home">
+            <Container
+                maxWidth="md"
                 sx={{
-                    marginTop: '40px',
-                    display: 'flex',
- 
-                    width: '100%',
-                    height: '100%',
-                }}
-                >
-                    {/* <MenuIcon /> */}
-                </Box>
-                </Box>
-                <Box sx={{
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    width: '50%',
-                    height: '240px',
-                    borderRadius: '240px',
-
-                }}>
-                    <Box sx={{
-                        borderRadius: '40px',
-                        // border: '3px solid #fff',
-                        width: '100%',
-                        height: '100%',
-                    }}>
-
-                    </Box>
-
+                    gap: { xs: 3, md: 4, lg: 6 },
+                    paddingTop: { xs: '100px', sm: '120px', md: '140px', lg: '160px' },
+                    paddingBottom: { xs: '60px', sm: '80px', md: '100px', lg: '120px' },
+                    flexDirection: { xs: 'column', md: 'row' },
+                }}
+            >
+                <Box
+                    sx={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: isSmallScreen ? 'center' : 'flex-start',
+                        justifyContent: 'center',
+                        gap: 2,
+                        width: { xs: '100%', md: '50%' },
+                        animation: 'slideInLeft 0.8s ease-out',
+                        textAlign: { xs: 'center', md: 'left' },
+                    }}
+                >
+                    <Typography
+                        variant="h5"
+                        component="h2"
+                        sx={{
+                            color: 'primary.main',
+                            fontWeight: 600,
+                        }}
+                    >
+                        Olá, eu sou a
+                    </Typography>
+                    <Typography
+                        variant={isMobile ? 'h3' : 'h2'}
+                        component="h1"
+                        sx={{
+                            fontWeight: 700,
+                            background: 'linear-gradient(135deg, #C4B5FD 0%, #A855F7 50%, #DDD6FE 100%)',
+                            WebkitBackgroundClip: 'text',
+                            WebkitTextFillColor: 'transparent',
+                            backgroundClip: 'text',
+                            lineHeight: 1.2,
+                        }}
+                    >
+                        Geórgia Carin
+                    </Typography>
+                    <Typography
+                        variant={isMobile ? 'body1' : 'h6'}
+                        component="p"
+                        sx={{
+                            color: 'text.secondary',
+                            maxWidth: '600px',
+                            lineHeight: 1.6,
+                        }}
+                    >
+                        Desenvolvedora Frontend e Designer UX apaixonada por criar experiências digitais únicas e intuitivas.
+                    </Typography>
+                    <SocialLinks />
                 </Box>
+
+                {!isSmallScreen && (
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            width: { xs: '180px', sm: '220px', md: '300px' },
+                            animation: 'slideInRight 0.8s ease-out',
+                        }}
+                    >
+                        <Box
+                            component="img"
+                            src={perfil}
+                            alt="Foto de Perfil - Geórgia Carin"
+                            sx={{
+                                width: '100%',
+                                height: 'auto',
+                                borderRadius: '16px',
+                                border: '3px solid',
+                                borderColor: 'primary.main',
+                                boxShadow: '0 10px 30px rgba(124, 58, 237, 0.25)',
+                                transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                                '&:hover': {
+                                    transform: 'scale(1.02)',
+                                    boxShadow: '0 15px 35px rgba(124, 58, 237, 0.35)',
+                                },
+                            }}
+                        />
+                    </Box>
+                )}
             </Container>
         </Box>
     )
