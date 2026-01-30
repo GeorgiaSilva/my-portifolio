@@ -1,4 +1,4 @@
-import { Box, Typography, Card, CardContent, Chip, useTheme as useMuiTheme } from '@mui/material'
+import { Box, Typography, Card, CardContent, Chip } from '@mui/material'
 import FigmaButton from './figmaButton'
 import kifome from '../assets/kifome.png'
 
@@ -15,7 +15,6 @@ interface ProjectProps {
 }
 
 export const Project: React.FC<ProjectProps> = ({ data, index }) => {
-  const theme = useMuiTheme()
   const displayImage = data.img || kifome
 
   return (
@@ -29,17 +28,16 @@ export const Project: React.FC<ProjectProps> = ({ data, index }) => {
       <Card
         sx={{
           height: '100%',
-          // backgroundColor: theme.palette.mode === 'dark' ? data.color : theme.palette.background.paper,
-          borderRadius: '12px',
+          backgroundColor: 'transparent',
+          borderRadius: '8px',
           overflow: 'hidden',
-          transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-          border: '1px solid',
-          borderColor: theme.palette.mode === 'dark' ? 'rgba(124, 58, 237, 0.2)' : 'rgba(124, 58, 237, 0.1)',
+          transition: 'transform 0.3s ease',
+          border: 'none',
+          boxShadow: 'none',
           display: 'flex',
           flexDirection: 'column',
           '&:hover': {
-            transform: 'translateY(-4px)',
-            boxShadow: '0 8px 16px rgba(168, 85, 247, 0.15)',
+            transform: 'translateY(-2px)',
           },
         }}
       >

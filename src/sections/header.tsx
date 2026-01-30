@@ -10,15 +10,14 @@ export const Header = () => {
     return (
         <Box id="home">
             <Container
-                maxWidth="md"
+                maxWidth="xl"
                 sx={{
-      
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     gap: { xs: 3, md: 4, lg: 6 },
-                    paddingTop: { xs: '100px', sm: '120px', md: '140px', lg: '160px' },
-                    paddingBottom: { xs: '60px', sm: '80px', md: '100px', lg: '120px' },
+                    paddingTop: { xs: '80px', sm: '100px', md: '120px', lg: '140px' },
+                    paddingBottom: { xs: '40px', sm: '60px', md: '80px', lg: '100px' },
                     flexDirection: { xs: 'column', md: 'row' },
                 }}
             >
@@ -89,14 +88,13 @@ export const Header = () => {
                             sx={{
                                 width: '100%',
                                 height: 'auto',
-                                borderRadius: '16px',
-                                border: '2px solid',
-                                borderColor: 'primary.main',
-                                boxShadow: '0 10px 30px rgba(124, 58, 237, 0.25)',
+                                borderRadius: '8px',
+                                border: 'none',
+                                boxShadow: 'none',
                                 transition: 'transform 0.3s ease, box-shadow 0.3s ease',
                                 '&:hover': {
-                                    transform: 'scale(1.02)',
-                                    boxShadow: '0 15px 35px rgba(124, 58, 237, 0.35)',
+                                    transform: 'scale(1.01)',
+                                    boxShadow: '0 4px 12px rgba(124, 58, 237, 0.15)',
                                 },
                             }}
                         />

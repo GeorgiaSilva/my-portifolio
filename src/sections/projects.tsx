@@ -46,7 +46,7 @@ export const Projects = () => {
         paddingBottom: { xs: '50px', sm: '60px', md: '80px', lg: '100px' },
       }}
     >
-      <Container maxWidth="md">
+      <Container maxWidth="xl">
         <Box
           sx={{
             textAlign: 'center',

@@ -11,12 +11,11 @@ const footer = () => {
       sx={{
         backgroundColor: 'background.default',
         textAlign: 'center',
-        padding: { xs: '24px 0', sm: '30px 0', md: '36px 0' },
-        borderTop: '1px solid',
-        borderColor: 'divider',
+        padding: { xs: '16px 0', sm: '20px 0', md: '24px 0' },
+        borderTop: 'none',
       }}
     >
-      <Container maxWidth="md">
+      <Container maxWidth="xl">
         <Box
           sx={{
             display: 'flex',

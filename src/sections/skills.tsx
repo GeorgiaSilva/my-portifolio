@@ -11,6 +11,7 @@ export const Habilidade = () => {
   const skills = [
     { icon: faFigma, name: 'Figma' },
     { icon: faReact, name: 'React' },
+    // { icon: faNext, name: 'React Native' }
     { icon: faWordpress, name: 'WordPress' },
     { icon: faAndroid, name: 'Android' },
   ]
@@ -23,7 +24,7 @@ export const Habilidade = () => {
         paddingBottom: { xs: '50px', sm: '60px', md: '80px', lg: '100px' },
       }}
     >
-      <Container maxWidth="md">
+      <Container maxWidth="xl">
         <Box
           sx={{
             textAlign: 'center',
@@ -53,13 +54,14 @@ export const Habilidade = () => {
           </Typography>
         </Box>
 
-        <Grid container spacing={3} justifyContent="center">
+        <Grid container spacing={2} justifyContent="center">
           {skills.map((skill, index) => (
             <Grid
               key={index}
-              size={{ xs: 12, sm: 6, md: 3 }}
+              size={{ xs: 6, sm: 4, md: 2 }}
               sx={{
                 display: 'flex',
+
                 justifyContent: 'center',
               }}
             >
@@ -68,23 +70,18 @@ export const Habilidade = () => {
                   backgroundColor: theme.palette.mode === 'dark'
                     ? 'rgba(168, 85, 247, 0.1)'
                     : 'rgb(245, 238, 254)',
-                  borderRadius: '16px',
-                  padding: { xs: '24px', sm: '30px', md: '32px' },
+                  borderRadius: '8px',
+                  padding: { xs: '16px', sm: '20px', md: '24px' },
                   alignItems: 'center',
                   display: 'flex',
                   flexDirection: 'column',
-                  gap: 1.5,
+                  gap: 1,
                   width: '100%',
-                  maxWidth: { xs: '200px', sm: '240px', md: '280px' },
-                  transition: 'transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease',
-                  border: '1px solid',
-                  borderColor: theme.palette.mode === 'dark'
-                    ? 'rgba(168, 85, 247, 0.2)'
-                    : 'rgba(168, 85, 247, 0.25)',
+                  // maxWidth: { xs: '180px', sm: '220px', md: '260px' },
+                  transition: 'transform 0.3s ease',
+                  border: 'none',
                   '&:hover': {
-                    transform: 'translateY(-4px)',
-                    boxShadow: '0 8px 16px rgba(168, 85, 247, 0.15)',
-                    borderColor: 'primary.main',
+                    transform: 'translateY(-2px)',
                   },
                 }}
               >

@@ -21,11 +21,11 @@ export const Navigation = () => {
         right: 0,
         backgroundColor: 'background.default',
         zIndex: 1000,
-        boxShadow: '0 1px 6px rgba(0, 0, 0, 0.1)',
+        boxShadow: 'none',
         padding: { xs: '8px 0', sm: '10px 0', md: '12px 0' },
       }}
     >
-      <Container maxWidth="md">
+      <Container maxWidth="xl">
       <Typography
         variant="body1"
         component="div"
