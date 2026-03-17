@@ -35,7 +35,7 @@ export const SocialLinks = () => {
               },
             }}
           >
-            <GitHub fontSize="small" />
+            <GitHub fontSize="large" />
           </IconButton>
         </Link>
       </Tooltip>
@@ -63,7 +63,7 @@ export const SocialLinks = () => {
               },
             }}
           >
-            <LinkedIn fontSize="small" />
+            <LinkedIn fontSize="large" />
           </IconButton>
         </Link>
       </Tooltip>

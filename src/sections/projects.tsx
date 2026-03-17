@@ -69,7 +69,7 @@ export const Projects = () => {
             Meus Projetos
           </Typography>
           <Typography
-            variant="body2"
+            variant="body1"
             sx={{
               color: 'text.secondary',
               maxWidth: '600px',

@@ -39,7 +39,7 @@ export const Navigation = () => {
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
           backgroundClip: 'text',
-          fontSize: { xs: '1rem', sm: '1.4rem' },
+          fontSize: { xs: '1.1rem', sm: '1.5rem' },
         }}
       >
         GC
@@ -60,7 +60,7 @@ export const Navigation = () => {
             sx={{
               color: 'text.primary',
               textDecoration: 'none',
-              fontSize: isMobile ? '0.75rem' : '1rem',
+              fontSize: isMobile ? '0.85rem' : '1.05rem',
               fontWeight: 500,
               transition: 'all 0.3s ease',
               position: 'relative',

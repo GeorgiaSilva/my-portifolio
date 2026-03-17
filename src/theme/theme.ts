@@ -24,6 +24,7 @@ export const darkTheme = createTheme({
   },
   typography: {
     fontFamily: 'Inter, system-ui, Avenir, Helvetica, Arial, sans-serif',
+    fontSize: 17,
   },
   components: {
     MuiButton: {
@@ -70,6 +71,7 @@ export const lightTheme = createTheme({
   },
   typography: {
     fontFamily: 'Inter, system-ui, Avenir, Helvetica, Arial, sans-serif',
+    fontSize: 17,
   },
   components: {
     MuiButton: {

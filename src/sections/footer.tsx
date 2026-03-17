@@ -41,7 +41,7 @@ const footer = () => {
               },
             }}
           >
-            <GitHub sx={{ fontSize: 24 }} />
+            <GitHub fontSize='large' />
           </Link>
           <Link
             href="https://www.linkedin.com/in/ge%C3%B3rgia-carin-martins-da-silva-10903b212/"
@@ -56,12 +56,12 @@ const footer = () => {
               },
             }}
           >
-            <LinkedIn sx={{ fontSize: 24 }} />
+            <LinkedIn fontSize='large' />
           </Link>
         </Box>
 
         <Typography
-          variant="caption"
+          variant="body1"
           sx={{
             color: 'text.secondary',
             display: 'block',
@@ -87,7 +87,7 @@ const footer = () => {
         </Typography>
 
         <Typography
-          variant="caption"
+          variant="body2"
           sx={{
             color: 'text.secondary',
           }}

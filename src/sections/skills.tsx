@@ -47,7 +47,7 @@ export const Habilidade = () => {
             Minhas Habilidades
           </Typography>
           <Typography
-            variant="body2"
+            variant="body1"
             sx={{
               color: 'text.secondary',
               maxWidth: '600px',
@@ -58,7 +58,7 @@ export const Habilidade = () => {
           </Typography>
         </Box>
 
-        <Grid container spacing={2} justifyContent="center">
+        <Grid container spacing={4} justifyContent="center">
           {skills.map((skill, index) => (
             <Grid
               key={index}
@@ -79,7 +79,7 @@ export const Habilidade = () => {
                   alignItems: 'center',
                   display: 'flex',
                   flexDirection: 'column',
-                  gap: 1,
+                  gap: 2,
                   width: '100%',
                   // maxWidth: { xs: '180px', sm: '220px', md: '260px' },
                   transition: 'transform 0.3s ease',

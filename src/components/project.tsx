@@ -80,19 +80,19 @@ export const Project: React.FC<ProjectProps> = ({ data, index }) => {
             sx={{
               fontWeight: 600,
               color: 'text.primary',
-              fontSize: { xs: '1rem', sm: '1.1rem' },
+          
             }}
           >
             {data.title}
           </Typography>
 
           <Typography
-            variant="caption"
+            variant="body1"
             sx={{
               color: 'text.secondary',
-              lineHeight: 1.5,
+              lineHeight: 1.2,
               flexGrow: 1,
-              fontSize: { xs: '0.75rem', sm: '0.8rem' },
+              marginBottom: 2,
             }}
           >
             {data.description}
@@ -102,21 +102,21 @@ export const Project: React.FC<ProjectProps> = ({ data, index }) => {
             sx={{
               display: 'flex',
               flexWrap: 'wrap',
-              gap: 0.5,
-              marginBottom: 0.5,
+              gap: 1.5,
+              marginBottom: 2,
             }}
           >
             {data.technologies.map((tech, i) => (
               <Chip
                 key={i}
                 label={tech}
-                size="small"
+                size='medium'
                 sx={{
                   backgroundColor: 'primary.main',
                   color: 'white',
-                  fontWeight: 500,
-                  height: { xs: '20px', sm: '24px' },
-                  fontSize: { xs: '0.65rem', sm: '0.7rem' },
+                  fontWeight: 600,
+                  height: { xs: '24px', sm: '32px' },
+                  fontSize: { xs: '0.75rem', sm: '1.2rem' },
                 }}
               />
             ))}

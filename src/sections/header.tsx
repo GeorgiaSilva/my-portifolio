@@ -66,11 +66,13 @@ export const Header = () => {
                         Geórgia Carin
                     </Typography>
                     <Typography
-                        variant={isMobile ? 'body1' : 'h6'}
+                        variant="body1"
                         component="p"
+
                         sx={{
                             color: 'text.secondary',
                             lineHeight: 1.6,
+                            width: { xs: '100%', md: '80%' },
                            
                         }}
                     >
