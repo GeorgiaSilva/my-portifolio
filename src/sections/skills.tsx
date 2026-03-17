@@ -20,11 +20,15 @@ export const Habilidade = () => {
     <Box
       id="skills"
       sx={{
+        width: '100%',
         paddingTop: { xs: '50px', sm: '60px', md: '80px', lg: '100px' },
         paddingBottom: { xs: '50px', sm: '60px', md: '80px', lg: '100px' },
       }}
     >
-      <Container maxWidth="xl">
+      <Container
+        maxWidth={false}
+        sx={{ maxWidth: '1500px', mx: 'auto', px: { xs: 2, sm: 3, md: 5 } }}
+      >
         <Box
           sx={{
             textAlign: 'center',
@@ -58,7 +62,7 @@ export const Habilidade = () => {
           {skills.map((skill, index) => (
             <Grid
               key={index}
-              size={{ xs: 6, sm: 4, md: 2 }}
+              size={{ xs: 6, sm: 4, md: 3 }}
               sx={{
                 display: 'flex',
 

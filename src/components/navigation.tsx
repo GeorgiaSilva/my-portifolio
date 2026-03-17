@@ -22,24 +22,24 @@ export const Navigation = () => {
         backgroundColor: 'background.default',
         zIndex: 1000,
         boxShadow: 'none',
-        padding: { xs: '8px 0', sm: '10px 0', md: '12px 0' },
+        padding: { xs: '24px 24px', sm: '24px 24px', md: '24px 24px' },
       }}
     >
-      <Container maxWidth="xl">
+      <Container
+        maxWidth={false}
+        sx={{ maxWidth: '1500px', mx: 'auto', px: { xs: 2, sm: 3, md: 5 } }}
+      >
       <Typography
         variant="body1"
         component="div"
         sx={{
           position: 'absolute',
           left: { xs: '16px', sm: '24px' },
-          top: '50%',
-          transform: 'translateY(-50%)',
-          fontWeight: 700,
           background: 'linear-gradient(135deg, #7C3AED 0%, #A855F7 100%)',
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
           backgroundClip: 'text',
-          fontSize: { xs: '1rem', sm: '1.1rem' },
+          fontSize: { xs: '1rem', sm: '1.4rem' },
         }}
       >
         GC
@@ -60,7 +60,7 @@ export const Navigation = () => {
             sx={{
               color: 'text.primary',
               textDecoration: 'none',
-              fontSize: isMobile ? '0.75rem' : '0.875rem',
+              fontSize: isMobile ? '0.75rem' : '1rem',
               fontWeight: 500,
               transition: 'all 0.3s ease',
               position: 'relative',

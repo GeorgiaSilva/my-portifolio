@@ -8,14 +8,22 @@ export const Header = () => {
     const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'))
 
     return (
-        <Box id="home">
+        <Box
+            id="home"
+            sx={{
+                width: '100%',
+            }}
+        >
             <Container
-                maxWidth="xl"
+                maxWidth={false}
                 sx={{
+                    maxWidth: '1500px',
+                    mx: 'auto',
+                    px: { xs: 2, sm: 3, md: 5 },
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    gap: { xs: 3, md: 4, lg: 6 },
+                    gap: { xs: 3, md: 6, lg: 8 },
                     paddingTop: { xs: '80px', sm: '100px', md: '120px', lg: '140px' },
                     paddingBottom: { xs: '40px', sm: '60px', md: '80px', lg: '100px' },
                     flexDirection: { xs: 'column', md: 'row' },
@@ -29,7 +37,7 @@ export const Header = () => {
                         alignItems: isSmallScreen ? 'center' : '',
                         justifyContent: 'center',
                         gap: 2,
-                        width: { xs: '100%', md: '50%' },
+                        width: { xs: '80%', md: '56%' },
                         animation: 'slideInLeft 0.8s ease-out',
                         textAlign: { xs: 'center', md: 'left' },
                     }}
@@ -77,7 +85,7 @@ export const Header = () => {
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
-                            width: { xs: '180px', sm: '220px', md: '300px' },
+                            width: { xs: '200px', sm: '260px', md: '380px' },
                             animation: 'slideInRight 0.8s ease-out',
                         }}
                     >

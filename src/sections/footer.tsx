@@ -9,13 +9,17 @@ const footer = () => {
       id="footer"
       component="footer"
       sx={{
+        width: '100%',
         backgroundColor: 'background.default',
         textAlign: 'center',
         padding: { xs: '16px 0', sm: '20px 0', md: '24px 0' },
         borderTop: 'none',
       }}
     >
-      <Container maxWidth="xl">
+      <Container
+        maxWidth={false}
+        sx={{ maxWidth: '1500px', mx: 'auto', px: { xs: 2, sm: 3, md: 5 } }}
+      >
         <Box
           sx={{
             display: 'flex',
