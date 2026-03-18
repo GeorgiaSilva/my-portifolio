@@ -75,9 +75,8 @@ export const Project: React.FC<ProjectProps> = ({ data, index }) => {
           }}
         >
           <Typography
-            variant="h6"
-            component="h3"
             sx={{
+              fontSize: { xs: '18px', sm: '20px' },
               fontWeight: 600,
               color: 'text.primary',
           
@@ -87,12 +86,13 @@ export const Project: React.FC<ProjectProps> = ({ data, index }) => {
           </Typography>
 
           <Typography
-            variant="body1"
+            fontSize={"16px"}
             sx={{
               color: 'text.secondary',
               lineHeight: 1.2,
               flexGrow: 1,
               marginBottom: 2,
+              
             }}
           >
             {data.description}
@@ -110,13 +110,11 @@ export const Project: React.FC<ProjectProps> = ({ data, index }) => {
               <Chip
                 key={i}
                 label={tech}
-                size='medium'
                 sx={{
                   backgroundColor: 'primary.main',
                   color: 'white',
                   fontWeight: 600,
-                  height: { xs: '24px', sm: '32px' },
-                  fontSize: { xs: '0.75rem', sm: '1.2rem' },
+                  fontSize: { xs: '10px', sm: '12px' },
                 }}
               />
             ))}

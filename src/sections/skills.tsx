@@ -36,22 +36,22 @@ export const Habilidade = () => {
           }}
         >
           <Typography
-            variant="h5"
-            component="h2"
+      
             sx={{
               color: 'text.primary',
               fontWeight: 700,
               marginBottom: 1,
+              fontSize: { xs: '20px', sm: '24px', md: '28px' },
             }}
           >
             Minhas Habilidades
           </Typography>
           <Typography
-            variant="body1"
             sx={{
               color: 'text.secondary',
               maxWidth: '600px',
               margin: '0 auto',
+              fontSize: { xs: '14px', sm: '16px' },
             }}
           >
             Aqui estão algumas das minhas habilidades técnicas:

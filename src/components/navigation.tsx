@@ -30,8 +30,6 @@ export const Navigation = () => {
         sx={{ maxWidth: '1500px', mx: 'auto', px: { xs: 2, sm: 3, md: 5 } }}
       >
       <Typography
-        variant="body1"
-        component="div"
         sx={{
           position: 'absolute',
           left: { xs: '16px', sm: '24px' },
@@ -60,7 +58,7 @@ export const Navigation = () => {
             sx={{
               color: 'text.primary',
               textDecoration: 'none',
-              fontSize: isMobile ? '0.85rem' : '1.05rem',
+              fontSize: isMobile ? '14px' : '16px',
               fontWeight: 500,
               transition: 'all 0.3s ease',
               position: 'relative',

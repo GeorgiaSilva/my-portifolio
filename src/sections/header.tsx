@@ -36,7 +36,7 @@ export const Header = () => {
                         flexDirection: 'column',
                         alignItems: isSmallScreen ? 'center' : '',
                         justifyContent: 'center',
-                        gap: 2,
+                        gap: 1,
                         width: { xs: '80%', md: '56%' },
                         animation: 'slideInLeft 0.8s ease-out',
                         textAlign: { xs: 'center', md: 'left' },
@@ -54,7 +54,7 @@ export const Header = () => {
                     </Typography>
                     <Typography
                         variant={isMobile ? 'h3' : 'h2'}
-                        component="h1"
+
                         sx={{
                            
                             fontWeight: 700,
@@ -66,14 +66,13 @@ export const Header = () => {
                         Geórgia Carin
                     </Typography>
                     <Typography
-                        variant="body1"
-                        component="p"
-
+                  
                         sx={{
                             color: 'text.secondary',
-                            lineHeight: 1.6,
+                            lineHeight: 1.2,
                             width: { xs: '100%', md: '80%' },
-                           
+                            fontSize: { xs: '14px', sm: '16px' },
+
                         }}
                     >
                         Desenvolvedora Frontend e Designer UX apaixonada por criar experiências digitais únicas e intuitivas.

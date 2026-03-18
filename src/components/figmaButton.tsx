@@ -30,7 +30,7 @@ const figmaButton = ({ url }: FigmaButtonProps) => {
         transition: 'all 0.3s ease',
       }}
     >
-      Ver Protótipo
+      Ver Design
     </Button>
   )
 }
