@@ -1,14 +1,15 @@
 import { Box, Typography, Card, CardContent, Chip } from '@mui/material'
 import FigmaButton from './figmaButton'
 import kifome from '../assets/kifome.png'
+import { useTranslation } from 'react-i18next'
 
 interface ProjectProps {
   data: {
     color: string
-    title: string
-    description: string
+    titleKey: string
+    descriptionKey: string
     img: string | null
-    technologies: string[]
+    technologiesKeys: string[]
     figmaUrl: string | null
   }
   index: number
@@ -16,6 +17,7 @@ interface ProjectProps {
 
 export const Project: React.FC<ProjectProps> = ({ data, index }) => {
   const displayImage = data.img || kifome
+  const { t } = useTranslation()
 
   return (
     <Box
@@ -50,9 +52,9 @@ export const Project: React.FC<ProjectProps> = ({ data, index }) => {
           }}
         >
           <Box
-            component="img"
+            component='img'
             src={displayImage}
-            alt={data.title}
+            alt={t(data.titleKey)}
             sx={{
               position: 'absolute',
               top: 0,
@@ -79,23 +81,21 @@ export const Project: React.FC<ProjectProps> = ({ data, index }) => {
               fontSize: { xs: '18px', sm: '20px' },
               fontWeight: 600,
               color: 'text.primary',
-          
             }}
           >
-            {data.title}
+            {t(data.titleKey)}
           </Typography>
 
           <Typography
-            fontSize={"16px"}
+            fontSize='16px'
             sx={{
               color: 'text.secondary',
               lineHeight: 1.2,
               flexGrow: 1,
               marginBottom: 2,
-              
             }}
           >
-            {data.description}
+            {t(data.descriptionKey)}
           </Typography>
 
           <Box
@@ -106,10 +106,10 @@ export const Project: React.FC<ProjectProps> = ({ data, index }) => {
               marginBottom: 2,
             }}
           >
-            {data.technologies.map((tech, i) => (
+            {data.technologiesKeys.map((tech, i) => (
               <Chip
                 key={i}
-                label={tech}
+                label={t(tech)}
                 sx={{
                   backgroundColor: 'primary.main',
                   color: 'white',

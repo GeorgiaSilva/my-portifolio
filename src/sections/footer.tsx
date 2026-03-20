@@ -1,13 +1,15 @@
 import { Box, Container, Typography, Link } from '@mui/material'
 import { GitHub, LinkedIn } from '@mui/icons-material'
+import { useTranslation } from 'react-i18next'
 
-const footer = () => {
+const Footer = () => {
   const currentYear = new Date().getFullYear()
+  const { t } = useTranslation()
 
   return (
     <Box
-      id="footer"
-      component="footer"
+      id='footer'
+      component='footer'
       sx={{
         width: '100%',
         backgroundColor: 'background.default',
@@ -29,9 +31,9 @@ const footer = () => {
           }}
         >
           <Link
-            href="https://github.com/GeorgiaSilva"
-            target="_blank"
-            rel="noopener"
+            href='https://github.com/GeorgiaSilva'
+            target='_blank'
+            rel='noopener'
             sx={{
               color: 'text.secondary',
               transition: 'all 0.3s ease',
@@ -44,9 +46,9 @@ const footer = () => {
             <GitHub fontSize='large' />
           </Link>
           <Link
-            href="https://www.linkedin.com/in/ge%C3%B3rgia-carin-martins-da-silva-10903b212/"
-            target="_blank"
-            rel="noopener"
+            href='https://www.linkedin.com/in/ge%C3%B3rgia-carin-martins-da-silva-10903b212/'
+            target='_blank'
+            rel='noopener'
             sx={{
               color: 'text.secondary',
               transition: 'all 0.3s ease',
@@ -61,18 +63,18 @@ const footer = () => {
         </Box>
 
         <Typography
-          variant="body1"
+          variant='body1'
           sx={{
             color: 'text.secondary',
             display: 'block',
             marginBottom: 0.5,
           }}
         >
-          Criado por{' '}
+          {t('footer.createdBy')}{' '}
           <Link
-            href="https://www.linkedin.com/in/ge%C3%B3rgia-carin-martins-da-silva-10903b212/"
-            target="_blank"
-            rel="noopener"
+            href='https://www.linkedin.com/in/ge%C3%B3rgia-carin-martins-da-silva-10903b212/'
+            target='_blank'
+            rel='noopener'
             sx={{
               color: 'primary.main',
               textDecoration: 'none',
@@ -82,21 +84,21 @@ const footer = () => {
               },
             }}
           >
-            Geórgia Carin
+            Georgia Carin
           </Link>
         </Typography>
 
         <Typography
-          variant="body2"
+          variant='body2'
           sx={{
             color: 'text.secondary',
           }}
         >
-          © {currentYear} Todos os direitos reservados
+          {t('footer.rightsReserved', { year: currentYear })}
         </Typography>
       </Container>
     </Box>
   )
 }
 
-export default footer
+export default Footer

@@ -4,21 +4,22 @@ import { faFigma } from '@fortawesome/free-brands-svg-icons'
 import { faReact } from '@fortawesome/free-brands-svg-icons'
 import { faWordpress } from '@fortawesome/free-brands-svg-icons'
 import { faAndroid } from '@fortawesome/free-brands-svg-icons'
+import { useTranslation } from 'react-i18next'
 
 export const Habilidade = () => {
   const theme = useMuiTheme()
+  const { t } = useTranslation()
 
   const skills = [
     { icon: faFigma, name: 'Figma' },
     { icon: faReact, name: 'React' },
-    // { icon: faNext, name: 'React Native' }
     { icon: faWordpress, name: 'WordPress' },
     { icon: faAndroid, name: 'Android' },
   ]
 
   return (
     <Box
-      id="skills"
+      id='skills'
       sx={{
         width: '100%',
         paddingTop: { xs: '50px', sm: '60px', md: '80px', lg: '100px' },
@@ -36,7 +37,6 @@ export const Habilidade = () => {
           }}
         >
           <Typography
-      
             sx={{
               color: 'text.primary',
               fontWeight: 700,
@@ -44,7 +44,7 @@ export const Habilidade = () => {
               fontSize: { xs: '20px', sm: '24px', md: '28px' },
             }}
           >
-            Minhas Habilidades
+            {t('skills.title')}
           </Typography>
           <Typography
             sx={{
@@ -54,18 +54,17 @@ export const Habilidade = () => {
               fontSize: { xs: '14px', sm: '16px' },
             }}
           >
-            Aqui estão algumas das minhas habilidades técnicas:
+            {t('skills.subtitle')}
           </Typography>
         </Box>
 
-        <Grid container spacing={4} justifyContent="center">
+        <Grid container spacing={4} justifyContent='center'>
           {skills.map((skill, index) => (
             <Grid
               key={index}
               size={{ xs: 6, sm: 4, md: 3 }}
               sx={{
                 display: 'flex',
-
                 justifyContent: 'center',
               }}
             >
@@ -81,7 +80,6 @@ export const Habilidade = () => {
                   flexDirection: 'column',
                   gap: 2,
                   width: '100%',
-                  // maxWidth: { xs: '180px', sm: '220px', md: '260px' },
                   transition: 'transform 0.3s ease',
                   border: 'none',
                   '&:hover': {
@@ -96,19 +94,15 @@ export const Habilidade = () => {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-
                     fontSize: { xs: '50px', sm: '60px', md: '70px' },
                     color: theme.palette.mode === 'light' ? '#A855F7' : '#FFFFFF',
                     transition: 'transform 0.3s ease',
                   }}
                 >
-                  <FontAwesomeIcon 
-                    icon={skill.icon}
-                  
-                  />
+                  <FontAwesomeIcon icon={skill.icon} />
                 </Box>
                 <Typography
-                  variant="body1"
+                  variant='body1'
                   sx={{
                     color: theme.palette.mode === 'light' ? '#A855F7' : '#FFFFFF',
                     textAlign: 'center',

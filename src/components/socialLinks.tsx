@@ -1,7 +1,10 @@
 import { Box, Tooltip, IconButton, Link } from '@mui/material'
 import { GitHub, LinkedIn } from '@mui/icons-material'
+import { useTranslation } from 'react-i18next'
 
 export const SocialLinks = () => {
+  const { t } = useTranslation()
+
   return (
     <Box
       sx={{
@@ -11,11 +14,11 @@ export const SocialLinks = () => {
         marginTop: 2,
       }}
     >
-      <Tooltip title="GitHub">
+      <Tooltip title={t('social.github')}>
         <Link
-          href="https://github.com/GeorgiaSilva"
-          target="_blank"
-          rel="noopener"
+          href='https://github.com/GeorgiaSilva'
+          target='_blank'
+          rel='noopener'
           sx={{
             color: 'text.primary',
             transition: 'all 0.3s ease',
@@ -26,7 +29,7 @@ export const SocialLinks = () => {
           }}
         >
           <IconButton
-            size="small"
+            size='small'
             sx={{
               color: 'inherit',
               transition: 'transform 0.3s ease',
@@ -35,15 +38,15 @@ export const SocialLinks = () => {
               },
             }}
           >
-            <GitHub fontSize="large" />
+            <GitHub fontSize='large' />
           </IconButton>
         </Link>
       </Tooltip>
-      <Tooltip title="LinkedIn">
+      <Tooltip title={t('social.linkedIn')}>
         <Link
-          href="https://www.linkedin.com/in/ge%C3%B3rgia-carin-martins-da-silva-10903b212/"
-          target="_blank"
-          rel="noopener"
+          href='https://www.linkedin.com/in/ge%C3%B3rgia-carin-martins-da-silva-10903b212/'
+          target='_blank'
+          rel='noopener'
           sx={{
             color: 'text.primary',
             transition: 'all 0.3s ease',
@@ -54,7 +57,7 @@ export const SocialLinks = () => {
           }}
         >
           <IconButton
-            size="small"
+            size='small'
             sx={{
               color: 'inherit',
               transition: 'transform 0.3s ease',
@@ -63,7 +66,7 @@ export const SocialLinks = () => {
               },
             }}
           >
-            <LinkedIn fontSize="large" />
+            <LinkedIn fontSize='large' />
           </IconButton>
         </Link>
       </Tooltip>

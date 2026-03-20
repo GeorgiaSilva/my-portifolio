@@ -1,19 +1,21 @@
 import { Button } from '@mui/material'
 import { Link } from '@mui/icons-material'
+import { useTranslation } from 'react-i18next'
 
 interface FigmaButtonProps {
   url?: string
 }
 
-const figmaButton = ({ url }: FigmaButtonProps) => {
+const FigmaButton = ({ url }: FigmaButtonProps) => {
+  const { t } = useTranslation()
   const defaultUrl = 'https://www.figma.com/proto/Y8xowrqqXgTmq9FHqk1A4C/KI-FOME?node-id=3-2&p=f&t=iStIoZGqN0aYiFAd-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1'
 
   return (
     <Button
-      variant="outlined"
+      variant='outlined'
       href={url || defaultUrl}
-      target="_blank"
-      rel="noopener"
+      target='_blank'
+      rel='noopener'
       startIcon={<Link />}
       sx={{
         padding: '10px 20px',
@@ -30,9 +32,9 @@ const figmaButton = ({ url }: FigmaButtonProps) => {
         transition: 'all 0.3s ease',
       }}
     >
-      Ver Design
+      {t('cta.viewDesign')}
     </Button>
   )
 }
 
-export default figmaButton
+export default FigmaButton
