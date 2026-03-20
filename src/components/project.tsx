@@ -1,22 +1,14 @@
 import { Box, Typography, Card, CardContent, Chip } from '@mui/material'
-import FigmaButton from './figmaButton'
-import kifome from '../assets/kifome.png'
 import { useTranslation } from 'react-i18next'
+import FigmaButton from './figmaButton'
+import type { ProjectCard } from '../config/siteContent'
 
 interface ProjectProps {
-  data: {
-    color: string
-    titleKey: string
-    descriptionKey: string
-    img: string | null
-    technologiesKeys: string[]
-    figmaUrl: string | null
-  }
+  data: ProjectCard
   index: number
 }
 
 export const Project: React.FC<ProjectProps> = ({ data, index }) => {
-  const displayImage = data.img || kifome
   const { t } = useTranslation()
 
   return (
@@ -53,7 +45,7 @@ export const Project: React.FC<ProjectProps> = ({ data, index }) => {
         >
           <Box
             component='img'
-            src={displayImage}
+            src={data.img}
             alt={t(data.titleKey)}
             sx={{
               position: 'absolute',
@@ -127,7 +119,7 @@ export const Project: React.FC<ProjectProps> = ({ data, index }) => {
               marginTop: 'auto',
             }}
           >
-            {data.figmaUrl && <FigmaButton url={data.figmaUrl} />}
+            <FigmaButton url={data.figmaUrl} />
           </Box>
         </CardContent>
       </Card>

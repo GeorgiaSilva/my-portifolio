@@ -1,8 +1,7 @@
 import { Box, Link, Typography, useTheme as useMuiTheme, useMediaQuery, Container, Button } from '@mui/material'
 import { ToggleTheme } from '../theme/toggleTheme'
 import { useTranslation } from 'react-i18next'
-import curriculumPdf from '../assets/Currículo.pdf'
-import resumeEnglishPdf from '../assets/Resume - English.pdf'
+import { RESUMES } from '../config/siteContent'
 
 export const Navigation = () => {
   const theme = useMuiTheme()
@@ -17,8 +16,9 @@ export const Navigation = () => {
   ]
 
   const isPortuguese = (i18n.resolvedLanguage || i18n.language).startsWith('pt')
-  const cvHref = isPortuguese ? curriculumPdf : resumeEnglishPdf
-  const cvDownloadName = isPortuguese ? 'Curriculo-Georgia-Carin.pdf' : 'Resume-Georgia-Carin.pdf'
+  const cvHref = isPortuguese ? RESUMES.pt.file : RESUMES.en.file
+  const cvDownloadName = isPortuguese ? RESUMES.pt.downloadName : RESUMES.en.downloadName
+
   const handleDownloadCv = async () => {
     try {
       const response = await fetch(cvHref)

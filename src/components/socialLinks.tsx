@@ -1,6 +1,7 @@
 import { Box, Tooltip, IconButton, Link } from '@mui/material'
 import { GitHub, LinkedIn } from '@mui/icons-material'
 import { useTranslation } from 'react-i18next'
+import { SOCIAL_LINKS } from '../config/siteContent'
 
 export const SocialLinks = () => {
   const { t } = useTranslation()
@@ -16,7 +17,7 @@ export const SocialLinks = () => {
     >
       <Tooltip title={t('social.github')}>
         <Link
-          href='https://github.com/GeorgiaSilva'
+          href={SOCIAL_LINKS.github}
           target='_blank'
           rel='noopener'
           sx={{
@@ -44,7 +45,7 @@ export const SocialLinks = () => {
       </Tooltip>
       <Tooltip title={t('social.linkedIn')}>
         <Link
-          href='https://www.linkedin.com/in/ge%C3%B3rgia-carin-martins-da-silva-10903b212/'
+          href={SOCIAL_LINKS.linkedIn}
           target='_blank'
           rel='noopener'
           sx={{

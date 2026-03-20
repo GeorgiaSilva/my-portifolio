@@ -1,6 +1,7 @@
 import { Box, Container, Typography, Link } from '@mui/material'
 import { GitHub, LinkedIn } from '@mui/icons-material'
 import { useTranslation } from 'react-i18next'
+import { SITE_OWNER_NAME, SOCIAL_LINKS } from '../config/siteContent'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -31,7 +32,7 @@ const Footer = () => {
           }}
         >
           <Link
-            href='https://github.com/GeorgiaSilva'
+            href={SOCIAL_LINKS.github}
             target='_blank'
             rel='noopener'
             sx={{
@@ -46,7 +47,7 @@ const Footer = () => {
             <GitHub fontSize='large' />
           </Link>
           <Link
-            href='https://www.linkedin.com/in/ge%C3%B3rgia-carin-martins-da-silva-10903b212/'
+            href={SOCIAL_LINKS.linkedIn}
             target='_blank'
             rel='noopener'
             sx={{
@@ -72,7 +73,7 @@ const Footer = () => {
         >
           {t('footer.createdBy')}{' '}
           <Link
-            href='https://www.linkedin.com/in/ge%C3%B3rgia-carin-martins-da-silva-10903b212/'
+            href={SOCIAL_LINKS.linkedIn}
             target='_blank'
             rel='noopener'
             sx={{
@@ -84,7 +85,7 @@ const Footer = () => {
               },
             }}
           >
-            Georgia Carin
+            {SITE_OWNER_NAME}
           </Link>
         </Typography>
 

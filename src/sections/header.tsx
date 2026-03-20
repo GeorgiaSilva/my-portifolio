@@ -1,7 +1,7 @@
 import { Box, Container, Typography, useTheme as useMuiTheme, useMediaQuery } from '@mui/material'
-import { SocialLinks } from '../components/socialLinks'
-import perfil from '../assets/foto-perfil.jpeg'
 import { useTranslation } from 'react-i18next'
+import { SocialLinks } from '../components/socialLinks'
+import { PROFILE } from '../config/siteContent'
 
 export const Header = () => {
   const theme = useMuiTheme()
@@ -88,7 +88,7 @@ export const Header = () => {
           >
             <Box
               component='img'
-              src={perfil}
+              src={PROFILE.image}
               alt={t('header.photoAlt')}
               sx={{
                 width: '100%',
