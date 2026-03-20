@@ -2,6 +2,7 @@ import { Box, Container, Grid, Typography } from '@mui/material'
 import { Project } from '../components/project'
 import kifome from '../assets/kifome.png'
 import habitlanding from '../assets/habitflowlanding.png'
+import pagpay from '../assets/pagpay.png'
 const projects = [
   {
     title: 'Ki Fome',
@@ -19,14 +20,14 @@ const projects = [
     figmaUrl: "https://www.figma.com/design/9EYh23KfMjrru3nhGpgMPl/HabitFlow-Landing-page?node-id=0-1&t=8U7898mp0UmblPXQ-1",
     color: '#2d2d42',
   },
-  // {
-  //   title: 'Finance Tracker',
-  //   description: 'Aplicativo de controle financeiro pessoal com gráficos e relatórios detalhados.',
-  //   img: null,
-  //   technologies: ['React', 'Chart.js', 'Firebase'],
-  //   figmaUrl: null,
-  //   color: '#1a1a2e',
-  // },
+  {
+    title: 'PagPay',
+    description: 'Sistema de pagamento online de boletos, com integração de APIs de pagamento e interface intuitiva.',
+    img: pagpay,
+    technologies: ['Figma', 'React Native', 'Mobile Design'],
+    figmaUrl: "https://www.figma.com/proto/ueZChOcIQaijTC1xG0OuZn/PAGPAY?node-id=175-381&p=f&t=ew6q0dg2MebYBfvD-0&scaling=scale-down&content-scaling=fixed&page-id=175%3A90&starting-point-node-id=175%3A381",
+    color: '#1a1a2e',
+  },
   // {
   //   title: 'Travel Planner',
   //   description: 'Planejador de viagens com integração de mapas, itinerários e compartilhamento de experiências.',
