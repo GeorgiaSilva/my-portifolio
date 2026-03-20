@@ -19,6 +19,22 @@ export const Navigation = () => {
   const isPortuguese = (i18n.resolvedLanguage || i18n.language).startsWith('pt')
   const cvHref = isPortuguese ? curriculumPdf : resumeEnglishPdf
   const cvDownloadName = isPortuguese ? 'Curriculo-Georgia-Carin.pdf' : 'Resume-Georgia-Carin.pdf'
+  const handleDownloadCv = async () => {
+    try {
+      const response = await fetch(cvHref)
+      const blob = await response.blob()
+      const url = window.URL.createObjectURL(blob)
+      const anchor = document.createElement('a')
+      anchor.href = url
+      anchor.download = cvDownloadName
+      document.body.appendChild(anchor)
+      anchor.click()
+      anchor.remove()
+      window.URL.revokeObjectURL(url)
+    } catch {
+      window.open(cvHref, '_blank', 'noopener,noreferrer')
+    }
+  }
 
   return (
     <Box
@@ -106,10 +122,8 @@ export const Navigation = () => {
         >
           <Button
             size='small'
-            component='a'
-            href={cvHref}
-            download={cvDownloadName}
             variant='outlined'
+            onClick={handleDownloadCv}
             sx={{ minWidth: 36, px: 1.5, fontWeight: 700 }}
           >
             CV
