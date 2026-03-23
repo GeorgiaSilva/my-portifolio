@@ -34,6 +34,10 @@ const ptBR = {
         title: 'PagPay',
         description: 'Sistema de pagamento online de boletos, com integracao de APIs de pagamento e interface intuitiva.',
       },
+      miniTwitter: {
+        title: 'Mini Twitter',
+        description: 'Mini rede social para publicacao de posts curtos em tempo real.',
+      },
     },
     technologies: {
       reactNative: 'React Native',
@@ -41,6 +45,7 @@ const ptBR = {
       uxDesign: 'UX Design',
       react: 'React',
       mobileDesign: 'Mobile Design',
+      tailwind: 'Tailwind CSS',
     },
   },
   footer: {
@@ -56,7 +61,10 @@ const ptBR = {
     linkedIn: 'LinkedIn',
   },
   cta: {
-    viewDesign: 'Ver Design',
+    viewDesign: 'prototipo',
+    viewFigma: 'Figma',
+    viewRepository: 'Repositorio',
+    viewLive: 'Site',
   },
 }
 
@@ -96,6 +104,10 @@ const enUS = {
         title: 'PagPay',
         description: 'Online payment system for boletos with payment API integration and an intuitive interface.',
       },
+      miniTwitter: {
+        title: 'Mini Twitter',
+        description: 'Small social feed app for posting short updates in real time.',
+      },
     },
     technologies: {
       reactNative: 'React Native',
@@ -103,6 +115,7 @@ const enUS = {
       uxDesign: 'UX Design',
       react: 'React',
       mobileDesign: 'Mobile Design',
+      tailwind: 'Tailwind CSS',
     },
   },
   footer: {
@@ -119,6 +132,9 @@ const enUS = {
   },
   cta: {
     viewDesign: 'View Design',
+    viewFigma: 'Figma',
+    viewRepository: 'Repository',
+    viewLive: 'Live Site',
   },
 }
 
@@ -128,3 +144,5 @@ export const resources = {
   en: { translation: enUS },
   'en-US': { translation: enUS },
 } as const
+
+

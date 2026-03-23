@@ -1,6 +1,7 @@
-import { Box, Typography, Card, CardContent, Chip } from '@mui/material'
+import { Box, Typography, Card, CardContent, Chip, IconButton } from '@mui/material'
+import PublicIcon from '@mui/icons-material/Public'
 import { useTranslation } from 'react-i18next'
-import FigmaButton from './figmaButton'
+import { FaFigma, FaGithub } from 'react-icons/fa'
 import type { ProjectCard } from '../config/siteContent'
 
 interface ProjectProps {
@@ -10,6 +11,27 @@ interface ProjectProps {
 
 export const Project: React.FC<ProjectProps> = ({ data, index }) => {
   const { t } = useTranslation()
+
+  const projectLinks = [
+    {
+      key: 'figma',
+      url: data.figmaUrl,
+      ariaLabel: t('cta.viewFigma'),
+      icon: <FaFigma size={22} />,
+    },
+    {
+      key: 'github',
+      url: data.githubUrl,
+      ariaLabel: t('cta.viewRepository'),
+      icon: <FaGithub size={22} />,
+    },
+    {
+      key: 'live',
+      url: data.liveUrl,
+      ariaLabel: t('cta.viewLive'),
+      icon: <PublicIcon sx={{ fontSize: 24 }} />,
+    },
+  ]
 
   return (
     <Box
@@ -117,9 +139,37 @@ export const Project: React.FC<ProjectProps> = ({ data, index }) => {
               display: 'flex',
               gap: 1,
               marginTop: 'auto',
+              flexWrap: 'wrap',
             }}
           >
-            <FigmaButton url={data.figmaUrl} />
+            {projectLinks.map((link) =>
+              link.url ? (
+                <IconButton
+                  key={link.key}
+                  href={link.url}
+                  target='_blank'
+                  rel='noopener'
+                  aria-label={link.ariaLabel}
+                  sx={{
+                    border: '1px solid',
+                    borderColor: 'primary.main',
+                    color: 'primary.main',
+                    width: 44,
+                    height: 44,
+                    '&:hover': {
+                      borderColor: 'primary.main',
+                      backgroundColor: 'primary.main',
+                      color: 'white',
+                      transform: 'translateY(-2px)',
+                    },
+                    borderRadius: 2,
+                    transition: 'all 0.3s ease',
+                  }}
+                >
+                  {link.icon}
+                </IconButton>
+              ) : null,
+            )}
           </Box>
         </CardContent>
       </Card>

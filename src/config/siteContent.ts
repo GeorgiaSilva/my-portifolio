@@ -3,6 +3,7 @@ import kifomeImage from '../assets/kifome.png'
 import habitFlowLandingImage from '../assets/habitflowlanding.png'
 import pagpayImage from '../assets/pagpay.png'
 import curriculumPdf from '../assets/Currículo.pdf'
+import miniTwitter from '../assets/mini-twitter.png'
 import resumeEnglishPdf from '../assets/Resume - English.pdf'
 
 export const SITE_OWNER_NAME = 'Georgia Carin'
@@ -32,7 +33,9 @@ export type ProjectCard = {
   titleKey: string
   descriptionKey: string
   technologiesKeys: string[]
-  figmaUrl: string
+  figmaUrl?: string
+  githubUrl?: string
+  liveUrl?: string
   color: string
   img: string
 }
@@ -44,6 +47,7 @@ export const PROJECT_CARDS: ProjectCard[] = [
     img: kifomeImage,
     technologiesKeys: ['projects.technologies.reactNative', 'projects.technologies.figma', 'projects.technologies.uxDesign'],
     figmaUrl: 'https://www.figma.com/proto/Y8xowrqqXgTmq9FHqk1A4C/KI-FOME?node-id=3-2&p=f&t=iStIoZGqN0aYiFAd-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1',
+    githubUrl: 'https://github.com/GeorgiaSilva/KIFOME',
     color: '#1e1e2e',
   },
   {
@@ -62,4 +66,18 @@ export const PROJECT_CARDS: ProjectCard[] = [
     figmaUrl: 'https://www.figma.com/proto/ueZChOcIQaijTC1xG0OuZn/PAGPAY?node-id=175-381&p=f&t=ew6q0dg2MebYBfvD-0&scaling=scale-down&content-scaling=fixed&page-id=175%3A90&starting-point-node-id=175%3A381',
     color: '#1a1a2e',
   },
+  {
+    titleKey: 'projects.items.miniTwitter.title',
+    descriptionKey: 'projects.items.miniTwitter.description',
+    img: miniTwitter,
+    githubUrl: 'https://github.com/GeorgiaSilva/b2bit-mini-twitter',
+    liveUrl: 'https://b2bit-mini-twitter.vercel.app/',
+    technologiesKeys: ['projects.technologies.react', 'projects.technologies.tailwind'],
+    color: '#0f172a',
+  },
 ]
+
+
+
+
+
