@@ -1,4 +1,4 @@
-const ptBR = {
+﻿const ptBR = {
   nav: {
     home: 'Inicio',
     skills: 'Habilidades',
@@ -21,32 +21,6 @@ const ptBR = {
   projects: {
     title: 'Meus Projetos',
     subtitle: 'Confira alguns dos projetos que desenvolvi:',
-    items: {
-      kifome: {
-        title: 'Ki Fome',
-        description: 'Aplicativo de pesquisa de restaurantes, bares e lanchonetes perto de voce.',
-      },
-      habitFlowLanding: {
-        title: 'HabitFlow Landing Page',
-        description: 'Landing page para o aplicativo HabitFlow, focada em design moderno e responsivo.',
-      },
-      pagPay: {
-        title: 'PagPay',
-        description: 'Sistema de pagamento online de boletos, com integracao de APIs de pagamento e interface intuitiva.',
-      },
-      miniTwitter: {
-        title: 'Mini Twitter',
-        description: 'Mini rede social para publicacao de posts curtos em tempo real.',
-      },
-    },
-    technologies: {
-      reactNative: 'React Native',
-      figma: 'Figma',
-      uxDesign: 'UX Design',
-      react: 'React',
-      mobileDesign: 'Mobile Design',
-      tailwind: 'Tailwind CSS',
-    },
   },
   footer: {
     createdBy: 'Criado por',
@@ -91,32 +65,6 @@ const enUS = {
   projects: {
     title: 'My Projects',
     subtitle: 'Check out some of the projects I developed:',
-    items: {
-      kifome: {
-        title: 'Ki Fome',
-        description: 'Restaurant, bar, and snack place discovery app near you.',
-      },
-      habitFlowLanding: {
-        title: 'HabitFlow Landing Page',
-        description: 'Landing page for the HabitFlow app focused on modern and responsive design.',
-      },
-      pagPay: {
-        title: 'PagPay',
-        description: 'Online payment system for boletos with payment API integration and an intuitive interface.',
-      },
-      miniTwitter: {
-        title: 'Mini Twitter',
-        description: 'Small social feed app for posting short updates in real time.',
-      },
-    },
-    technologies: {
-      reactNative: 'React Native',
-      figma: 'Figma',
-      uxDesign: 'UX Design',
-      react: 'React',
-      mobileDesign: 'Mobile Design',
-      tailwind: 'Tailwind CSS',
-    },
   },
   footer: {
     createdBy: 'Created by',
@@ -144,5 +92,3 @@ export const resources = {
   en: { translation: enUS },
   'en-US': { translation: enUS },
 } as const
-
-

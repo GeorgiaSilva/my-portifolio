@@ -1,4 +1,4 @@
-import { Box, Typography, Card, CardContent, Chip, IconButton } from '@mui/material'
+﻿import { Box, Typography, Card, CardContent, Chip, IconButton } from '@mui/material'
 import PublicIcon from '@mui/icons-material/Public'
 import { useTranslation } from 'react-i18next'
 import { FaFigma, FaGithub } from 'react-icons/fa'
@@ -10,7 +10,8 @@ interface ProjectProps {
 }
 
 export const Project: React.FC<ProjectProps> = ({ data, index }) => {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+  const language = i18n.resolvedLanguage?.startsWith('pt') ? 'pt' : 'en'
 
   const projectLinks = [
     {
@@ -32,6 +33,11 @@ export const Project: React.FC<ProjectProps> = ({ data, index }) => {
       icon: <PublicIcon sx={{ fontSize: 24 }} />,
     },
   ]
+
+  const technologies = data.technologies[language]
+    .split(',')
+    .map((tech) => tech.trim())
+    .filter(Boolean)
 
   return (
     <Box
@@ -68,7 +74,7 @@ export const Project: React.FC<ProjectProps> = ({ data, index }) => {
           <Box
             component='img'
             src={data.img}
-            alt={t(data.titleKey)}
+            alt={data.title[language]}
             sx={{
               position: 'absolute',
               top: 0,
@@ -97,7 +103,7 @@ export const Project: React.FC<ProjectProps> = ({ data, index }) => {
               color: 'text.primary',
             }}
           >
-            {t(data.titleKey)}
+            {data.title[language]}
           </Typography>
 
           <Typography
@@ -109,7 +115,7 @@ export const Project: React.FC<ProjectProps> = ({ data, index }) => {
               marginBottom: 2,
             }}
           >
-            {t(data.descriptionKey)}
+            {data.description[language]}
           </Typography>
 
           <Box
@@ -120,10 +126,10 @@ export const Project: React.FC<ProjectProps> = ({ data, index }) => {
               marginBottom: 2,
             }}
           >
-            {data.technologiesKeys.map((tech, i) => (
+            {technologies.map((tech, i) => (
               <Chip
                 key={i}
-                label={t(tech)}
+                label={tech}
                 sx={{
                   backgroundColor: 'primary.main',
                   color: 'white',

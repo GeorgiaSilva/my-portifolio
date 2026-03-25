@@ -9,10 +9,10 @@ export const SocialLinks = () => {
   return (
     <Box
       sx={{
-        display: 'flex',
-        gap: 1,
+       gap: 1,
         alignItems: 'center',
         marginTop: 2,
+
       }}
     >
       <Tooltip title={t('social.github')}>
