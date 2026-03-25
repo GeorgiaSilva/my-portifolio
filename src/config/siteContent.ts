@@ -21,7 +21,7 @@ export const PROFILE = {
 export const RESUMES = {
   pt: {
     file: curriculumPdf,
-    downloadName: 'Curriculo-Georgia-Carin.pdf',
+    downloadName: 'Currículo-Georgia-Carin.pdf',
   },
   en: {
     file: resumeEnglishPdf,
@@ -52,7 +52,7 @@ export const PROJECT_CARDS: ProjectCard[] = [
       en: 'Ki Fome',
     },
     description: {
-      pt: 'Aplicativo de pesquisa de restaurantes, bares e lanchonetes perto de voce.',
+      pt: 'Aplicativo de pesquisa de restaurantes, bares e lanchonetes perto de você.',
       en: 'Restaurant, bar, and snack place discovery app near you.',
     },
     img: kifomeImage,
@@ -87,7 +87,7 @@ export const PROJECT_CARDS: ProjectCard[] = [
       en: 'PagPay',
     },
     description: {
-      pt: 'Sistema de pagamento online de boletos, com integracao de APIs de pagamento e interface intuitiva.',
+      pt: 'Sistema de pagamento online de boletos, com integração de APIs de pagamento e interface intuitiva.',
       en: 'Online payment system for boletos with payment API integration and an intuitive interface.',
     },
     img: pagpayImage,
@@ -104,7 +104,7 @@ export const PROJECT_CARDS: ProjectCard[] = [
       en: 'Mini Twitter',
     },
     description: {
-      pt: 'Mini rede social para publicacao de posts curtos em tempo real.',
+      pt: 'Mini rede social para publicação de posts curtos em tempo real.',
       en: 'Small social feed app for posting short updates in real time.',
     },
     img: miniTwitter,
@@ -117,4 +117,5 @@ export const PROJECT_CARDS: ProjectCard[] = [
     color: '#0f172a',
   },
 ]
+
 

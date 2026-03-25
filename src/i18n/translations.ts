@@ -1,6 +1,6 @@
 ﻿const ptBR = {
   nav: {
-    home: 'Inicio',
+    home: 'Início',
     skills: 'Habilidades',
     projects: 'Projetos',
     contact: 'Contato',
@@ -9,14 +9,14 @@
     en: 'EN',
   },
   header: {
-    greeting: 'Ola, eu sou a',
+    greeting: 'Olá, eu sou a',
     name: 'Georgia Carin',
-    role: 'Desenvolvedora Frontend e Designer UX apaixonada por criar experiencias digitais unicas e intuitivas.',
+    role: 'Desenvolvedora Frontend e Designer UX apaixonada por criar experiências digitais únicas e intuitivas.',
     photoAlt: 'Foto de perfil - Georgia Carin',
   },
   skills: {
     title: 'Minhas Habilidades',
-    subtitle: 'Aqui estao algumas das minhas habilidades tecnicas:',
+    subtitle: 'Aqui estão algumas das minhas habilidades técnicas:',
   },
   projects: {
     title: 'Meus Projetos',
@@ -35,9 +35,9 @@
     linkedIn: 'LinkedIn',
   },
   cta: {
-    viewDesign: 'prototipo',
+    viewDesign: 'protótipo',
     viewFigma: 'Figma',
-    viewRepository: 'Repositorio',
+    viewRepository: 'Repositório',
     viewLive: 'Site',
   },
 }
@@ -92,3 +92,4 @@ export const resources = {
   en: { translation: enUS },
   'en-US': { translation: enUS },
 } as const
+
