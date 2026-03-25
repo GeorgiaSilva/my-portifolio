@@ -14,6 +14,7 @@ export const Header = () => {
       id='home'
       sx={{
         width: '100%',
+        padding: isMobile ? '100px 0' : '80px 0',
       }}
     >
       <Container
