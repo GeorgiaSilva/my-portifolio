@@ -6,7 +6,7 @@ import curriculumPdf from '../assets/Currículo.pdf'
 import miniTwitter from '../assets/mini-twitter.png'
 import resumeEnglishPdf from '../assets/Resume - English.pdf'
 
-export const SITE_OWNER_NAME = 'Georgia Carin'
+export const SITE_OWNER_NAME = 'Geórgia Carin'
 
 export const SOCIAL_LINKS = {
   github: 'https://github.com/GeorgiaSilva',
