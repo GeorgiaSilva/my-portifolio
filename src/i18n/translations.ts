@@ -10,7 +10,7 @@
   },
   header: {
     greeting: 'Olá, eu sou a',
-    name: 'Georgia Carin',
+    name: 'Geórgia Carin',
     role: 'Desenvolvedora Frontend e Designer UX apaixonada por criar experiências digitais únicas e intuitivas.',
     photoAlt: 'Foto de perfil - Georgia Carin',
   },
@@ -54,7 +54,7 @@ const enUS = {
   },
   header: {
     greeting: 'Hi, I am',
-    name: 'Georgia Carin',
+    name: 'Geórgia Carin',
     role: 'Frontend Developer and UX Designer passionate about creating unique and intuitive digital experiences.',
     photoAlt: 'Profile photo - Georgia Carin',
   },
