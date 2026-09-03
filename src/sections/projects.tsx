@@ -1,13 +1,16 @@
+import { useState } from 'react'
 import { Box, Container, Grid, Typography } from '@mui/material'
 import { useTranslation } from 'react-i18next'
 import { Project } from '../components/project'
-import { PROJECT_CARDS } from '../config/siteContent'
+import { PROJECT_CARDS, type ProjectCard } from '../config/siteContent'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 import { CodeLabel } from '../components/codeLabel'
+import { ProjectCaseStudy } from '../components/projectCaseStudy'
 
 export const Projects = () => {
   const { t } = useTranslation()
   const titleReveal = useScrollReveal<HTMLDivElement>()
+  const [selectedProject, setSelectedProject] = useState<ProjectCard | null>(null)
 
   return (
     <Box
@@ -55,21 +58,25 @@ export const Projects = () => {
           </Typography>
         </Box>
 
-        <Grid container spacing={3}>
-          {PROJECT_CARDS.map((project, index) => (
+        <Grid container spacing={{ xs: 2.5, md: 3 }}>
+          <Grid size={12} sx={{ display: 'flex' }}>
+            <Project data={PROJECT_CARDS[0]} index={0} featured onOpen={setSelectedProject} />
+          </Grid>
+          {PROJECT_CARDS.slice(1).map((project, index) => (
             <Grid
-              key={index}
-              size={{ xs: 12, sm: 6, md: PROJECT_CARDS.length === 1 ? 4 : 4 }}
+              key={project.title.pt}
+              size={{ xs: 12, md: 6 }}
               sx={{
                 display: 'flex',
                 justifyContent: 'center',
               }}
             >
-              <Project data={project} index={index} />
+              <Project data={project} index={index + 1} onOpen={setSelectedProject} />
             </Grid>
           ))}
         </Grid>
       </Container>
+      <ProjectCaseStudy project={selectedProject} onClose={() => setSelectedProject(null)} />
     </Box>
   )
 }

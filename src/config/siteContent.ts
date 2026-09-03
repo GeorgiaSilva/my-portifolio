@@ -42,6 +42,7 @@ type LocalizedList = {
 export type ProjectCard = {
   title: LocalizedText
   description: LocalizedText
+  kind: LocalizedText
   technologies: LocalizedText
   fileName: string
   role: LocalizedText
@@ -62,6 +63,10 @@ export const PROJECT_CARDS: ProjectCard[] = [
     description: {
       pt: 'Aplicativo de pesquisa de restaurantes, bares e lanchonetes perto de você.',
       en: 'Restaurant, bar, and snack place discovery app near you.',
+    },
+    kind: {
+      pt: 'Aplicativo mobile',
+      en: 'Mobile application',
     },
     img: kifomeImage,
     technologies: {
@@ -90,6 +95,10 @@ export const PROJECT_CARDS: ProjectCard[] = [
       pt: 'Landing page para o aplicativo HabitFlow, focada em design moderno e responsivo.',
       en: 'Landing page for the HabitFlow app focused on modern and responsive design.',
     },
+    kind: {
+      pt: 'Landing page',
+      en: 'Landing page',
+    },
     img: habitFlowLandingImage,
     technologies: {
       pt: 'Figma, React, UX Design',
@@ -116,6 +125,10 @@ export const PROJECT_CARDS: ProjectCard[] = [
       pt: 'Sistema de pagamento online de boletos, com integração de APIs de pagamento e interface intuitiva.',
       en: 'Online payment system for boletos with payment API integration and an intuitive interface.',
     },
+    kind: {
+      pt: 'Experiência mobile',
+      en: 'Mobile experience',
+    },
     img: pagpayImage,
     technologies: {
       pt: 'Figma, React Native, Mobile Design',
@@ -141,6 +154,10 @@ export const PROJECT_CARDS: ProjectCard[] = [
     description: {
       pt: 'Mini rede social para publicação de posts curtos em tempo real.',
       en: 'Small social feed app for posting short updates in real time.',
+    },
+    kind: {
+      pt: 'Aplicação web',
+      en: 'Web application',
     },
     img: miniTwitter,
     githubUrl: 'https://github.com/GeorgiaSilva/b2bit-mini-twitter',

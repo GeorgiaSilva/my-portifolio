@@ -32,6 +32,14 @@
   projects: {
     title: 'Meus Projetos',
     subtitle: 'Confira alguns dos projetos que desenvolvi:',
+    preview: 'Preview',
+    caseStudy: 'Case study',
+    stack: 'Stack',
+    featured: 'Em destaque',
+    openCaseStudy: 'Abrir case study',
+    projectType: 'Tipo de projeto',
+    aboutProject: 'Sobre o projeto',
+    contributions: 'O que desenvolvi',
   },
   footer: {
     createdBy: 'Criado por',
@@ -93,6 +101,14 @@ const enUS = {
   projects: {
     title: 'My Projects',
     subtitle: 'Check out some of the projects I developed:',
+    preview: 'Preview',
+    caseStudy: 'Case study',
+    stack: 'Stack',
+    featured: 'Featured',
+    openCaseStudy: 'Open case study',
+    projectType: 'Project type',
+    aboutProject: 'About the project',
+    contributions: 'What I built',
   },
   footer: {
     createdBy: 'Created by',
