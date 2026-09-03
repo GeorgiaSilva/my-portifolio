@@ -13,6 +13,9 @@
     name: 'Geórgia Carin',
     role: 'Desenvolvedora Frontend e Designer UX apaixonada por criar experiências digitais únicas e intuitivas.',
     photoAlt: 'Foto de perfil - Georgia Carin',
+    availability: 'Disponível para novas oportunidades',
+    viewProjects: 'Ver projetos',
+    contactMe: 'Vamos conversar',
   },
   skills: {
     title: 'Minhas Habilidades',
@@ -25,6 +28,9 @@
   footer: {
     createdBy: 'Criado por',
     rightsReserved: '(c) {{year}} Todos os direitos reservados',
+    title: 'Vamos criar algo memorável?',
+    subtitle: 'Estou sempre aberta a conversar sobre novos projetos, produtos e experiências digitais.',
+    contactCta: 'Falar pelo LinkedIn',
   },
   theme: {
     lightMode: 'Modo claro',
@@ -57,6 +63,9 @@ const enUS = {
     name: 'Geórgia Carin',
     role: 'Frontend Developer and UX Designer passionate about creating unique and intuitive digital experiences.',
     photoAlt: 'Profile photo - Georgia Carin',
+    availability: 'Available for new opportunities',
+    viewProjects: 'View projects',
+    contactMe: 'Let’s talk',
   },
   skills: {
     title: 'My Skills',
@@ -69,6 +78,9 @@ const enUS = {
   footer: {
     createdBy: 'Created by',
     rightsReserved: '(c) {{year}} All rights reserved',
+    title: 'Let’s create something memorable?',
+    subtitle: 'I am always open to talking about new projects, products, and digital experiences.',
+    contactCta: 'Talk on LinkedIn',
   },
   theme: {
     lightMode: 'Light mode',
@@ -92,4 +104,3 @@ export const resources = {
   en: { translation: enUS },
   'en-US': { translation: enUS },
 } as const
-

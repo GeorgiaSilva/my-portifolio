@@ -9,7 +9,8 @@ export const SocialLinks = () => {
   return (
     <Box
       sx={{
-       gap: 1,
+        display: 'flex',
+        gap: 1,
         alignItems: 'center',
         marginTop: 2,
 

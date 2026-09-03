@@ -1,117 +1,66 @@
 import { Box, Container, Grid, Typography, useTheme as useMuiTheme } from '@mui/material'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFigma } from '@fortawesome/free-brands-svg-icons'
-import { faReact } from '@fortawesome/free-brands-svg-icons'
-import { faWordpress } from '@fortawesome/free-brands-svg-icons'
-import { faAndroid } from '@fortawesome/free-brands-svg-icons'
+import { faFigma, faReact, faWordpress, faAndroid } from '@fortawesome/free-brands-svg-icons'
+import type { IconDefinition } from '@fortawesome/fontawesome-svg-core'
 import { useTranslation } from 'react-i18next'
+import { useScrollReveal } from '../hooks/useScrollReveal'
+
+type Skill = { icon: IconDefinition; name: string }
+
+const SkillCard = ({ skill, index }: { skill: Skill; index: number }) => {
+  const theme = useMuiTheme()
+  const reveal = useScrollReveal<HTMLDivElement>(0.2)
+  const isDark = theme.palette.mode === 'dark'
+
+  return (
+    <Box ref={reveal.ref} className={`scroll-reveal ${reveal.isVisible ? 'visible' : ''}`} sx={{ width: '100%', transitionDelay: `${index * 90}ms` }}>
+      <Box
+        sx={{
+          minHeight: { xs: 170, sm: 200, md: 220 }, borderRadius: '16px', padding: { xs: 2, sm: 2.5, md: 3 },
+          alignItems: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 1.5,
+          background: isDark ? 'linear-gradient(145deg, rgba(168, 85, 247, 0.15), rgba(15, 15, 21, 0.8))' : 'linear-gradient(145deg, #faf5ff, #ffffff)',
+          border: '1px solid', borderColor: isDark ? 'rgba(196, 181, 253, 0.14)' : 'rgba(168, 85, 247, 0.15)',
+          transition: 'transform 300ms ease, box-shadow 300ms ease, border-color 300ms ease',
+          '&:hover': {
+            transform: 'translateY(-7px)', borderColor: 'rgba(168, 85, 247, 0.58)', boxShadow: '0 18px 36px rgba(124, 58, 237, 0.18)',
+            '& .skill-icon': { transform: 'scale(1.12) rotate(-4deg)' },
+          },
+        }}
+      >
+        <Box className='skill-icon' sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: { xs: '46px', sm: '58px', md: '66px' }, color: 'primary.main', transition: 'transform 300ms ease' }}>
+          <FontAwesomeIcon icon={skill.icon} />
+        </Box>
+        <Typography variant='body1' sx={{ color: 'text.primary', textAlign: 'center', fontWeight: 700 }}>
+          {skill.name}
+        </Typography>
+      </Box>
+    </Box>
+  )
+}
 
 export const Habilidade = () => {
-  const theme = useMuiTheme()
   const { t } = useTranslation()
-
-  const skills = [
-    { icon: faFigma, name: 'Figma' },
-    { icon: faReact, name: 'React' },
-    { icon: faWordpress, name: 'WordPress' },
-    { icon: faAndroid, name: 'Android' },
+  const titleReveal = useScrollReveal<HTMLDivElement>()
+  const skills: Skill[] = [
+    { icon: faFigma, name: 'Figma' }, { icon: faReact, name: 'React' },
+    { icon: faWordpress, name: 'WordPress' }, { icon: faAndroid, name: 'Android' },
   ]
 
   return (
-    <Box
-      id='skills'
-      sx={{
-        width: '100%',
-        paddingTop: { xs: '50px', sm: '60px', md: '80px', lg: '100px' },
-        paddingBottom: { xs: '50px', sm: '60px', md: '80px', lg: '100px' },
-      }}
-    >
-      <Container
-        maxWidth={false}
-        sx={{ maxWidth: '1500px', mx: 'auto', px: { xs: 2, sm: 3, md: 5 } }}
-      >
-        <Box
-          sx={{
-            textAlign: 'center',
-            marginBottom: { xs: '30px', sm: '40px', md: '50px' },
-          }}
-        >
-          <Typography
-            sx={{
-              color: 'text.primary',
-              fontWeight: 700,
-              marginBottom: 1,
-              fontSize: { xs: '20px', sm: '24px', md: '28px' },
-            }}
-          >
+    <Box id='skills' sx={{ width: '100%', py: { xs: '70px', md: '100px' } }}>
+      <Container maxWidth={false} sx={{ maxWidth: '1500px', mx: 'auto', px: { xs: 2, sm: 3, md: 5 } }}>
+        <Box ref={titleReveal.ref} className={`scroll-reveal ${titleReveal.isVisible ? 'visible' : ''}`} sx={{ textAlign: 'center', mb: { xs: 4, md: 6 } }}>
+          <Typography component='h2' sx={{ color: 'text.primary', fontWeight: 800, mb: 1, fontSize: { xs: '1.8rem', sm: '2.1rem' } }}>
             {t('skills.title')}
           </Typography>
-          <Typography
-            sx={{
-              color: 'text.secondary',
-              maxWidth: '600px',
-              margin: '0 auto',
-              fontSize: { xs: '14px', sm: '16px' },
-            }}
-          >
+          <Typography sx={{ color: 'text.secondary', maxWidth: '600px', mx: 'auto', fontSize: { xs: '14px', sm: '16px' } }}>
             {t('skills.subtitle')}
           </Typography>
         </Box>
-
-        <Grid container spacing={4} justifyContent='center'>
+        <Grid container spacing={{ xs: 2, md: 3 }} justifyContent='center'>
           {skills.map((skill, index) => (
-            <Grid
-              key={index}
-              size={{ xs: 6, sm: 4, md: 3 }}
-              sx={{
-                display: 'flex',
-                justifyContent: 'center',
-              }}
-            >
-              <Box
-                sx={{
-                  backgroundColor: theme.palette.mode === 'dark'
-                    ? 'rgba(168, 85, 247, 0.1)'
-                    : 'rgb(245, 238, 254)',
-                  borderRadius: '8px',
-                  padding: { xs: '16px', sm: '20px', md: '24px' },
-                  alignItems: 'center',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: 2,
-                  width: '100%',
-                  transition: 'transform 0.3s ease',
-                  border: 'none',
-                  '&:hover': {
-                    transform: 'translateY(-2px)',
-                  },
-                }}
-              >
-                <Box
-                  sx={{
-                    width: { xs: '90px', sm: '110px', md: '130px' },
-                    height: { xs: '90px', sm: '110px', md: '130px' },
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontSize: { xs: '50px', sm: '60px', md: '70px' },
-                    color: theme.palette.mode === 'light' ? '#A855F7' : '#FFFFFF',
-                    transition: 'transform 0.3s ease',
-                  }}
-                >
-                  <FontAwesomeIcon icon={skill.icon} />
-                </Box>
-                <Typography
-                  variant='body1'
-                  sx={{
-                    color: theme.palette.mode === 'light' ? '#A855F7' : '#FFFFFF',
-                    textAlign: 'center',
-                    fontWeight: 600,
-                  }}
-                >
-                  {skill.name}
-                </Typography>
-              </Box>
+            <Grid key={skill.name} size={{ xs: 6, sm: 4, md: 3 }} sx={{ display: 'flex', justifyContent: 'center' }}>
+              <SkillCard skill={skill} index={index} />
             </Grid>
           ))}
         </Grid>

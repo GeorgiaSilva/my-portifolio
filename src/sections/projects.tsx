@@ -2,9 +2,11 @@ import { Box, Container, Grid, Typography } from '@mui/material'
 import { useTranslation } from 'react-i18next'
 import { Project } from '../components/project'
 import { PROJECT_CARDS } from '../config/siteContent'
+import { useScrollReveal } from '../hooks/useScrollReveal'
 
 export const Projects = () => {
   const { t } = useTranslation()
+  const titleReveal = useScrollReveal<HTMLDivElement>()
 
   return (
     <Box
@@ -20,12 +22,15 @@ export const Projects = () => {
         sx={{ maxWidth: '1500px', mx: 'auto', px: { xs: 2, sm: 3, md: 5 } }}
       >
         <Box
+          ref={titleReveal.ref}
+          className={`scroll-reveal ${titleReveal.isVisible ? 'visible' : ''}`}
           sx={{
             textAlign: 'center',
             marginBottom: { xs: '30px', sm: '40px', md: '50px' },
           }}
         >
           <Typography
+            component='h2'
             sx={{
               color: 'text.primary',
               fontWeight: 700,

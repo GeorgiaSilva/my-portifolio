@@ -3,6 +3,7 @@ import PublicIcon from '@mui/icons-material/Public'
 import { useTranslation } from 'react-i18next'
 import { FaFigma, FaGithub } from 'react-icons/fa'
 import type { ProjectCard } from '../config/siteContent'
+import { useScrollReveal } from '../hooks/useScrollReveal'
 
 interface ProjectProps {
   data: ProjectCard
@@ -12,6 +13,7 @@ interface ProjectProps {
 export const Project: React.FC<ProjectProps> = ({ data, index }) => {
   const { t, i18n } = useTranslation()
   const language = i18n.resolvedLanguage?.startsWith('pt') ? 'pt' : 'en'
+  const reveal = useScrollReveal<HTMLDivElement>(0.12)
 
   const projectLinks = [
     {
@@ -41,25 +43,31 @@ export const Project: React.FC<ProjectProps> = ({ data, index }) => {
 
   return (
     <Box
+      ref={reveal.ref}
+      className={`scroll-reveal ${reveal.isVisible ? 'visible' : ''}`}
       sx={{
         width: '100%',
         height: '100%',
-        animation: `slideUp 0.6s ease-out ${index * 0.1}s both`,
+        transitionDelay: `${index * 90}ms`,
       }}
     >
       <Card
         sx={{
           height: '100%',
-          backgroundColor: 'transparent',
-          borderRadius: '8px',
+          backgroundColor: 'background.paper',
+          borderRadius: '16px',
           overflow: 'hidden',
-          transition: 'transform 0.3s ease',
-          border: 'none',
-          boxShadow: 'none',
+          transition: 'transform 300ms ease, box-shadow 300ms ease, border-color 300ms ease',
+          border: '1px solid',
+          borderColor: 'divider',
+          boxShadow: '0 8px 22px rgba(15, 23, 42, 0.06)',
           display: 'flex',
           flexDirection: 'column',
           '&:hover': {
-            transform: 'translateY(-2px)',
+            transform: 'translateY(-8px)',
+            borderColor: 'rgba(168, 85, 247, 0.55)',
+            boxShadow: '0 22px 42px rgba(124, 58, 237, 0.18)',
+            '& img': { transform: 'scale(1.06)' },
           },
         }}
       >
@@ -69,6 +77,11 @@ export const Project: React.FC<ProjectProps> = ({ data, index }) => {
             paddingTop: '50%',
             backgroundColor: data.color,
             overflow: 'hidden',
+            '&::after': {
+              content: '""', position: 'absolute', inset: 0,
+              background: 'linear-gradient(180deg, transparent 45%, rgba(15, 8, 28, 0.38))',
+              pointerEvents: 'none',
+            },
           }}
         >
           <Box
@@ -82,14 +95,14 @@ export const Project: React.FC<ProjectProps> = ({ data, index }) => {
               width: '100%',
               height: '100%',
               objectFit: 'cover',
-              transition: 'transform 0.3s ease',
+              transition: 'transform 500ms ease',
             }}
           />
         </Box>
 
         <CardContent
           sx={{
-            padding: { xs: 1.5, sm: 2 },
+            padding: { xs: 2, sm: 2.5 },
             display: 'flex',
             flexDirection: 'column',
             gap: 1,
@@ -112,7 +125,7 @@ export const Project: React.FC<ProjectProps> = ({ data, index }) => {
               color: 'text.secondary',
               lineHeight: 1.2,
               flexGrow: 1,
-              marginBottom: 2,
+              marginBottom: 2.5,
             }}
           >
             {data.description[language]}
@@ -122,8 +135,8 @@ export const Project: React.FC<ProjectProps> = ({ data, index }) => {
             sx={{
               display: 'flex',
               flexWrap: 'wrap',
-              gap: 1.5,
-              marginBottom: 2,
+              gap: 1,
+              marginBottom: 2.5,
             }}
           >
             {technologies.map((tech, i) => (
@@ -131,8 +144,9 @@ export const Project: React.FC<ProjectProps> = ({ data, index }) => {
                 key={i}
                 label={tech}
                 sx={{
-                  backgroundColor: 'primary.main',
-                  color: 'white',
+                  backgroundColor: 'rgba(168, 85, 247, 0.1)',
+                  color: 'primary.main',
+                  border: '1px solid rgba(168, 85, 247, 0.22)',
                   fontWeight: 600,
                   fontSize: { xs: '10px', sm: '12px' },
                 }}
