@@ -1,4 +1,7 @@
+
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
+import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined';
+import InsertLinkOutlinedIcon from '@mui/icons-material/InsertLinkOutlined';
 import { Box } from '@mui/material';
 export const MenuIcon = () => {
   return (
@@ -15,30 +18,21 @@ export const MenuIcon = () => {
             color: '#aaa',
             borderRadius: '20%',
         }} />
-        <EmailOutlinedIcon sx={{
+        <LocalPhoneOutlinedIcon sx={{
             border: '2px solid #aaa',
             color: '#aaa',
             padding: 1,
             borderRadius: '20%',
         }} />
-        <EmailOutlinedIcon sx={{
+        <InsertLinkOutlinedIcon sx={{
             border: '2px solid #aaa',
             color: '#aaa',
+            width: '22px',
             padding: 1,
             borderRadius: '20%',
+          
         }} />
-        <EmailOutlinedIcon sx={{
-            border: '2px solid #aaa',
-            color: '#aaa',
-            padding: 1,
-            borderRadius: '20%',
-        }} />
-        <EmailOutlinedIcon sx={{
-            border: '2px solid #aaa',
-            color: '#aaa',
-            padding: 1,
-            borderRadius: '20%',
-        }} />
+
       
     </Box>
   )
