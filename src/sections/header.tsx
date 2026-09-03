@@ -5,6 +5,7 @@ import { SocialLinks } from '../components/socialLinks'
 import { PROFILE, SOCIAL_LINKS } from '../config/siteContent'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 import { CodeLabel } from '../components/codeLabel'
+import { DraggableInspector } from '../components/draggableInspector'
 
 export const Header = () => {
   const theme = useMuiTheme()
@@ -88,6 +89,9 @@ export const Header = () => {
               '&:hover': { transform: 'translateY(-6px) rotate(1deg)', boxShadow: '0 34px 70px rgba(124, 58, 237, 0.3)' },
             }}
           />
+          <Box sx={{ display: { xs: 'none', md: 'block' } }}>
+            <DraggableInspector />
+          </Box>
         </Box>
       </Container>
     </Box>
