@@ -19,11 +19,11 @@ export const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false)
 
   const navItems = [
-    { id: 'home', label: t('nav.home'), href: '#home' },
-    { id: 'about', label: t('nav.about'), href: '#about' },
-    { id: 'skills', label: t('nav.skills'), href: '#skills' },
-    { id: 'projects', label: t('nav.projects'), href: '#projects' },
-    { id: 'footer', label: t('nav.contact'), href: '#footer' },
+    { id: 'home', label: t('nav.home'), fileName: 'home.tsx', href: '#home' },
+    { id: 'about', label: t('nav.about'), fileName: 'about.tsx', href: '#about' },
+    { id: 'skills', label: t('nav.skills'), fileName: 'skills.tsx', href: '#skills' },
+    { id: 'projects', label: t('nav.projects'), fileName: 'projects.tsx', href: '#projects' },
+    { id: 'footer', label: t('nav.contact'), fileName: 'contact.tsx', href: '#footer' },
   ]
 
   const isPortuguese = (i18n.resolvedLanguage || i18n.language).startsWith('pt')
@@ -94,13 +94,14 @@ export const Navigation = () => {
               <Link
                 key={item.id}
                 href={item.href}
+                title={item.label}
                 sx={{
-                  position: 'relative', color: activeSection === item.id ? 'primary.main' : 'text.primary', textDecoration: 'none', fontSize: '0.95rem', fontWeight: activeSection === item.id ? 700 : 500,
+                  position: 'relative', color: activeSection === item.id ? 'primary.main' : 'text.primary', textDecoration: 'none', fontSize: '0.8rem', fontFamily: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace', fontWeight: activeSection === item.id ? 700 : 500,
                   '&::after': { content: '""', position: 'absolute', bottom: -7, left: 0, width: activeSection === item.id ? '100%' : 0, height: 2, borderRadius: 2, backgroundColor: 'primary.main', transition: 'width 220ms ease' },
                   '&:hover': { color: 'primary.main' }, '&:hover::after': { width: '100%' },
                 }}
               >
-                {item.label}
+                {item.fileName}
               </Link>
             ))}
           </Box>

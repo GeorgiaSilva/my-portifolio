@@ -3,6 +3,7 @@ import CodeIcon from '@mui/icons-material/Code'
 import { Box, Container, Stack, Typography, useTheme as useMuiTheme } from '@mui/material'
 import { useTranslation } from 'react-i18next'
 import { useScrollReveal } from '../hooks/useScrollReveal'
+import { CodeLabel } from '../components/codeLabel'
 
 export const About = () => {
   const { t } = useTranslation()
@@ -22,10 +23,14 @@ export const About = () => {
               boxShadow: isDark ? 'none' : '0 16px 36px rgba(124, 58, 237, 0.08)',
             }}
           >
-            <AutoAwesomeIcon sx={{ color: 'primary.main', fontSize: { xs: 42, md: 56 } }} />
-            <Typography sx={{ color: 'text.primary', maxWidth: 270, fontWeight: 800, fontSize: { xs: '1.55rem', md: '2rem' }, lineHeight: 1.15, letterSpacing: '-0.04em' }}>
-              UX + Frontend
-            </Typography>
+            <CodeLabel>{'profile.ts'}</CodeLabel>
+            <AutoAwesomeIcon sx={{ color: 'primary.main', fontSize: { xs: 38, md: 48 }, my: 1.5 }} />
+            <Box sx={{ fontFamily: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace', fontSize: { xs: '0.82rem', sm: '0.93rem' }, lineHeight: 1.75, color: 'text.secondary' }}>
+              <Typography component='div' sx={{ font: 'inherit', color: 'primary.main', fontWeight: 700 }}>const profile = {'{'}</Typography>
+              <Typography component='div' sx={{ font: 'inherit', pl: 2 }}>role: <Box component='span' sx={{ color: 'text.primary' }}>'Frontend + UX'</Box>,</Typography>
+              <Typography component='div' sx={{ font: 'inherit', pl: 2 }}>status: <Box component='span' sx={{ color: 'text.primary' }}>'available'</Box>,</Typography>
+              <Typography component='div' sx={{ font: 'inherit', color: 'primary.main', fontWeight: 700 }}>{'}'}</Typography>
+            </Box>
             <Box sx={{ width: 72, height: 5, borderRadius: 4, bgcolor: 'primary.main' }} />
           </Box>
 

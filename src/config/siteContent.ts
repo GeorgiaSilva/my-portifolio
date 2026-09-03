@@ -43,6 +43,7 @@ export type ProjectCard = {
   title: LocalizedText
   description: LocalizedText
   technologies: LocalizedText
+  fileName: string
   role: LocalizedText
   highlights: LocalizedList
   figmaUrl?: string
@@ -67,6 +68,7 @@ export const PROJECT_CARDS: ProjectCard[] = [
       pt: 'React Native, Figma, UX Design',
       en: 'React Native, Figma, UX Design',
     },
+    fileName: 'ki-fome.mobile.tsx',
     role: {
       pt: 'UX/UI Design e desenvolvimento mobile',
       en: 'UX/UI design and mobile development',
@@ -93,6 +95,7 @@ export const PROJECT_CARDS: ProjectCard[] = [
       pt: 'Figma, React, UX Design',
       en: 'Figma, React, UX Design',
     },
+    fileName: 'habitflow-landing.tsx',
     role: {
       pt: 'UX/UI Design e desenvolvimento frontend',
       en: 'UX/UI design and frontend development',
@@ -118,6 +121,7 @@ export const PROJECT_CARDS: ProjectCard[] = [
       pt: 'Figma, React Native, Mobile Design',
       en: 'Figma, React Native, Mobile Design',
     },
+    fileName: 'pagpay.mobile.fig',
     role: {
       pt: 'UX/UI Design para experiência mobile',
       en: 'UX/UI design for a mobile experience',
@@ -145,6 +149,7 @@ export const PROJECT_CARDS: ProjectCard[] = [
       pt: 'React, Tailwind CSS',
       en: 'React, Tailwind CSS',
     },
+    fileName: 'mini-twitter.tsx',
     role: {
       pt: 'Desenvolvimento frontend',
       en: 'Frontend development',
@@ -156,4 +161,3 @@ export const PROJECT_CARDS: ProjectCard[] = [
     color: '#0f172a',
   },
 ]
-

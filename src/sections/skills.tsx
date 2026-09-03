@@ -4,6 +4,7 @@ import { faFigma, faReact, faWordpress, faAndroid } from '@fortawesome/free-bran
 import type { IconDefinition } from '@fortawesome/fontawesome-svg-core'
 import { useTranslation } from 'react-i18next'
 import { useScrollReveal } from '../hooks/useScrollReveal'
+import { CodeLabel } from '../components/codeLabel'
 
 type Skill = { icon: IconDefinition; name: string }
 
@@ -50,7 +51,8 @@ export const Habilidade = () => {
     <Box id='skills' sx={{ width: '100%', py: { xs: '70px', md: '100px' } }}>
       <Container maxWidth={false} sx={{ maxWidth: '1500px', mx: 'auto', px: { xs: 2, sm: 3, md: 5 } }}>
         <Box ref={titleReveal.ref} className={`scroll-reveal ${titleReveal.isVisible ? 'visible' : ''}`} sx={{ textAlign: 'center', mb: { xs: 4, md: 6 } }}>
-          <Typography component='h2' sx={{ color: 'text.primary', fontWeight: 800, mb: 1, fontSize: { xs: '1.8rem', sm: '2.1rem' } }}>
+          <CodeLabel>{'<Skills />'}</CodeLabel>
+          <Typography component='h2' sx={{ color: 'text.primary', fontWeight: 800, mt: 1.5, mb: 1, fontSize: { xs: '1.8rem', sm: '2.1rem' } }}>
             {t('skills.title')}
           </Typography>
           <Typography sx={{ color: 'text.secondary', maxWidth: '600px', mx: 'auto', fontSize: { xs: '14px', sm: '16px' } }}>

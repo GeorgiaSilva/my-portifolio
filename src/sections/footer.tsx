@@ -4,6 +4,7 @@ import { GitHub, LinkedIn } from '@mui/icons-material'
 import { useTranslation } from 'react-i18next'
 import { SITE_OWNER_NAME, SOCIAL_LINKS } from '../config/siteContent'
 import { useScrollReveal } from '../hooks/useScrollReveal'
+import { CodeLabel } from '../components/codeLabel'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -38,6 +39,9 @@ const Footer = () => {
               {SITE_OWNER_NAME}
             </Link>{' · '}{t('footer.rightsReserved', { year: currentYear })}
           </Typography>
+          <Box sx={{ mt: 2 }}>
+            <CodeLabel compact>{'export default GeorgiaCarin'}</CodeLabel>
+          </Box>
         </Box>
       </Container>
     </Box>

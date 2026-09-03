@@ -7,6 +7,7 @@ import { useTranslation } from 'react-i18next'
 import { FaFigma, FaGithub } from 'react-icons/fa'
 import type { ProjectCard } from '../config/siteContent'
 import { useScrollReveal } from '../hooks/useScrollReveal'
+import { CodeLabel } from './codeLabel'
 
 interface ProjectProps {
   data: ProjectCard
@@ -102,6 +103,9 @@ export const Project: React.FC<ProjectProps> = ({ data, index }) => {
               transition: 'transform 500ms ease',
             }}
           />
+          <Box sx={{ position: 'absolute', top: 12, left: 12, zIndex: 1 }}>
+            <CodeLabel compact>{data.fileName}</CodeLabel>
+          </Box>
         </Box>
 
         <CardContent

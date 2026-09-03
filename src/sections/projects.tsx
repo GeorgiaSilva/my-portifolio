@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { Project } from '../components/project'
 import { PROJECT_CARDS } from '../config/siteContent'
 import { useScrollReveal } from '../hooks/useScrollReveal'
+import { CodeLabel } from '../components/codeLabel'
 
 export const Projects = () => {
   const { t } = useTranslation()
@@ -29,11 +30,13 @@ export const Projects = () => {
             marginBottom: { xs: '30px', sm: '40px', md: '50px' },
           }}
         >
+          <CodeLabel>{'<FeaturedProjects />'}</CodeLabel>
           <Typography
             component='h2'
             sx={{
               color: 'text.primary',
               fontWeight: 700,
+              marginTop: 1.5,
               marginBottom: 1,
               fontSize: { xs: '20px', sm: '24px', md: '28px' },
             }}
