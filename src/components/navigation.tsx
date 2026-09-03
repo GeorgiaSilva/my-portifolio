@@ -8,7 +8,7 @@ import { ToggleTheme } from '../theme/toggleTheme'
 import { useTranslation } from 'react-i18next'
 import { RESUMES } from '../config/siteContent'
 
-const sectionIds = ['home', 'skills', 'projects', 'footer']
+const sectionIds = ['home', 'about', 'skills', 'projects', 'footer']
 
 export const Navigation = () => {
   const theme = useMuiTheme()
@@ -20,6 +20,7 @@ export const Navigation = () => {
 
   const navItems = [
     { id: 'home', label: t('nav.home'), href: '#home' },
+    { id: 'about', label: t('nav.about'), href: '#about' },
     { id: 'skills', label: t('nav.skills'), href: '#skills' },
     { id: 'projects', label: t('nav.projects'), href: '#projects' },
     { id: 'footer', label: t('nav.contact'), href: '#footer' },

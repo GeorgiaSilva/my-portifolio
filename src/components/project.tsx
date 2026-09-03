@@ -1,5 +1,8 @@
-﻿import { Box, Typography, Card, CardContent, Chip, IconButton } from '@mui/material'
+﻿import { useState } from 'react'
+import { Box, Button, Card, CardContent, Chip, Collapse, IconButton, Typography } from '@mui/material'
 import PublicIcon from '@mui/icons-material/Public'
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
+import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline'
 import { useTranslation } from 'react-i18next'
 import { FaFigma, FaGithub } from 'react-icons/fa'
 import type { ProjectCard } from '../config/siteContent'
@@ -14,6 +17,7 @@ export const Project: React.FC<ProjectProps> = ({ data, index }) => {
   const { t, i18n } = useTranslation()
   const language = i18n.resolvedLanguage?.startsWith('pt') ? 'pt' : 'en'
   const reveal = useScrollReveal<HTMLDivElement>(0.12)
+  const [showDetails, setShowDetails] = useState(false)
 
   const projectLinks = [
     {
@@ -153,6 +157,28 @@ export const Project: React.FC<ProjectProps> = ({ data, index }) => {
               />
             ))}
           </Box>
+
+          <Button
+            onClick={() => setShowDetails((current) => !current)}
+            endIcon={<KeyboardArrowDownIcon sx={{ transform: showDetails ? 'rotate(180deg)' : 'none', transition: 'transform 200ms ease' }} />}
+            aria-expanded={showDetails}
+            sx={{ alignSelf: 'flex-start', mb: 1.5, px: 0, minWidth: 0, color: 'primary.main', fontWeight: 700 }}
+          >
+            {showDetails ? t('cta.hideDetails') : t('cta.seeDetails')}
+          </Button>
+
+          <Collapse in={showDetails} timeout={220} unmountOnExit>
+            <Box sx={{ mb: 2.5, p: 1.5, borderLeft: '2px solid', borderColor: 'primary.main', backgroundColor: 'rgba(168, 85, 247, 0.06)', borderRadius: '0 8px 8px 0' }}>
+              <Typography sx={{ color: 'text.primary', fontWeight: 700, fontSize: '0.82rem', mb: 0.75 }}>{t('cta.myRole')}</Typography>
+              <Typography sx={{ color: 'text.secondary', fontSize: '0.9rem', lineHeight: 1.45, mb: 1 }}>{data.role[language]}</Typography>
+              {data.highlights[language].map((highlight) => (
+                <Box key={highlight} sx={{ display: 'flex', gap: 0.75, alignItems: 'flex-start', mt: 0.65 }}>
+                  <CheckCircleOutlineIcon sx={{ color: 'primary.main', fontSize: 17, mt: '2px', flexShrink: 0 }} />
+                  <Typography sx={{ color: 'text.secondary', fontSize: '0.86rem', lineHeight: 1.45 }}>{highlight}</Typography>
+                </Box>
+              ))}
+            </Box>
+          </Collapse>
 
           <Box
             sx={{

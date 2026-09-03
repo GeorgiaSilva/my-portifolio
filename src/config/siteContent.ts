@@ -10,7 +10,7 @@ export const SITE_OWNER_NAME = 'Geórgia Carin'
 
 export const SOCIAL_LINKS = {
   github: 'https://github.com/GeorgiaSilva',
-  linkedIn: 'https://www.linkedin.com/in/ge%C3%B3rgia-carin-martins-da-silva-10903b212/',
+  linkedIn: 'https://www.linkedin.com/in/georgiacarinsilva/',
 } as const
 
 export const PROFILE = {
@@ -34,10 +34,17 @@ type LocalizedText = {
   en: string
 }
 
+type LocalizedList = {
+  pt: string[]
+  en: string[]
+}
+
 export type ProjectCard = {
   title: LocalizedText
   description: LocalizedText
   technologies: LocalizedText
+  role: LocalizedText
+  highlights: LocalizedList
   figmaUrl?: string
   githubUrl?: string
   liveUrl?: string
@@ -60,6 +67,14 @@ export const PROJECT_CARDS: ProjectCard[] = [
       pt: 'React Native, Figma, UX Design',
       en: 'React Native, Figma, UX Design',
     },
+    role: {
+      pt: 'UX/UI Design e desenvolvimento mobile',
+      en: 'UX/UI design and mobile development',
+    },
+    highlights: {
+      pt: ['Experiência de descoberta de restaurantes, bares e lanchonetes.', 'Protótipo e interface pensados para uma busca simples e próxima do usuário.'],
+      en: ['Restaurant, bar, and snack place discovery experience.', 'Prototype and interface designed for a simple, user-centered search.'],
+    },
     figmaUrl: 'https://www.figma.com/proto/Y8xowrqqXgTmq9FHqk1A4C/KI-FOME?node-id=3-2&p=f&t=iStIoZGqN0aYiFAd-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1',
     githubUrl: 'https://github.com/GeorgiaSilva/KIFOME',
     color: '#1e1e2e',
@@ -78,6 +93,14 @@ export const PROJECT_CARDS: ProjectCard[] = [
       pt: 'Figma, React, UX Design',
       en: 'Figma, React, UX Design',
     },
+    role: {
+      pt: 'UX/UI Design e desenvolvimento frontend',
+      en: 'UX/UI design and frontend development',
+    },
+    highlights: {
+      pt: ['Landing page responsiva para apresentar o produto HabitFlow.', 'Estrutura visual criada para comunicar benefícios e guiar a navegação.'],
+      en: ['Responsive landing page to introduce the HabitFlow product.', 'Visual structure created to communicate benefits and guide navigation.'],
+    },
     figmaUrl: 'https://www.figma.com/design/9EYh23KfMjrru3nhGpgMPl/HabitFlow-Landing-page?node-id=0-1&t=8U7898mp0UmblPXQ-1',
     color: '#2d2d42',
   },
@@ -94,6 +117,14 @@ export const PROJECT_CARDS: ProjectCard[] = [
     technologies: {
       pt: 'Figma, React Native, Mobile Design',
       en: 'Figma, React Native, Mobile Design',
+    },
+    role: {
+      pt: 'UX/UI Design para experiência mobile',
+      en: 'UX/UI design for a mobile experience',
+    },
+    highlights: {
+      pt: ['Fluxos de pagamento de boletos organizados em uma interface direta.', 'Protótipo voltado a clareza e facilidade de uso em tarefas financeiras.'],
+      en: ['Boleto payment flows organized into a straightforward interface.', 'Prototype focused on clarity and ease of use in financial tasks.'],
     },
     figmaUrl: 'https://www.figma.com/proto/ueZChOcIQaijTC1xG0OuZn/PAGPAY?node-id=175-381&p=f&t=ew6q0dg2MebYBfvD-0&scaling=scale-down&content-scaling=fixed&page-id=175%3A90&starting-point-node-id=175%3A381',
     color: '#1a1a2e',
@@ -114,8 +145,15 @@ export const PROJECT_CARDS: ProjectCard[] = [
       pt: 'React, Tailwind CSS',
       en: 'React, Tailwind CSS',
     },
+    role: {
+      pt: 'Desenvolvimento frontend',
+      en: 'Frontend development',
+    },
+    highlights: {
+      pt: ['Interface de feed para publicações curtas em tempo real.', 'Aplicação web construída com React e Tailwind CSS.'],
+      en: ['Feed interface for short posts in real time.', 'Web application built with React and Tailwind CSS.'],
+    },
     color: '#0f172a',
   },
 ]
-
 

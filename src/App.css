@@ -159,7 +159,7 @@ html {
   scroll-behavior: smooth;
 }
 
-#skills, #projects, #footer {
+#about, #skills, #projects, #footer {
   scroll-margin-top: 82px;
 }
 

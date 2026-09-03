@@ -1,6 +1,7 @@
 ﻿const ptBR = {
   nav: {
     home: 'Início',
+    about: 'Sobre mim',
     skills: 'Habilidades',
     projects: 'Projetos',
     contact: 'Contato',
@@ -20,6 +21,13 @@
   skills: {
     title: 'Minhas Habilidades',
     subtitle: 'Aqui estão algumas das minhas habilidades técnicas:',
+  },
+  about: {
+    eyebrow: 'Um pouco sobre mim',
+    title: 'Código com intenção, design com propósito.',
+    description: 'Sou desenvolvedora frontend e designer UX. Gosto de transformar ideias em interfaces claras, úteis e agradáveis de usar — cuidando tanto da experiência quanto dos detalhes de implementação.',
+    focusTitle: 'Meu foco',
+    focus: 'Criar produtos digitais responsivos que aproximem pessoas, objetivos e boas experiências.',
   },
   projects: {
     title: 'Meus Projetos',
@@ -45,12 +53,16 @@
     viewFigma: 'Figma',
     viewRepository: 'Repositório',
     viewLive: 'Site',
+    seeDetails: 'Ver detalhes',
+    hideDetails: 'Ocultar detalhes',
+    myRole: 'Minha participação',
   },
 }
 
 const enUS = {
   nav: {
     home: 'Home',
+    about: 'About',
     skills: 'Skills',
     projects: 'Projects',
     contact: 'Contact',
@@ -70,6 +82,13 @@ const enUS = {
   skills: {
     title: 'My Skills',
     subtitle: 'Here are some of my technical skills:',
+  },
+  about: {
+    eyebrow: 'A little about me',
+    title: 'Code with intent, design with purpose.',
+    description: 'I am a frontend developer and UX designer. I enjoy turning ideas into clear, useful, and pleasant-to-use interfaces — caring for both the experience and implementation details.',
+    focusTitle: 'My focus',
+    focus: 'Creating responsive digital products that bring people, goals, and great experiences closer together.',
   },
   projects: {
     title: 'My Projects',
@@ -95,6 +114,9 @@ const enUS = {
     viewFigma: 'Figma',
     viewRepository: 'Repository',
     viewLive: 'Live Site',
+    seeDetails: 'See details',
+    hideDetails: 'Hide details',
+    myRole: 'My role',
   },
 }
 
